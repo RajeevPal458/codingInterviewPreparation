@@ -7,7 +7,11 @@ public class TesterMain {
 		BubbleSort.sort(arr);
 		PrintArray.printIntArr(arr);
 		
+		SelectionSort.sort(arr);
+		PrintArray.printIntArr(arr);
 
+		InsertionSort.sort(arr);
+		PrintArray.printIntArr(arr);
 	}
 
 }
