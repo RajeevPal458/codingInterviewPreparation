@@ -31,6 +31,7 @@ public class UserService {
 		return userRepository.findById(id).get();
 	}
 
+	
 	public ResponceTemplateVo getUserWithDepartments(long userId) {
 		// TODO Auto-generated method stub
 		logger.info("inside UserService getUserWithDepartments");

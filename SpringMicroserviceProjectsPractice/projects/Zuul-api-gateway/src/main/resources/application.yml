@@ -4,38 +4,33 @@ server:
 spring:
   application:
     name: API-GATEWAY
-    
-    
-  cloud:
-    gateway:
-      routes:
-        - id: USER-SERVICE
-          uri: lb://USER-SERVICE
-          predicates:
-            - Path=/users/**
-          filters:
-            - name: CircuitBreaker
-              args:
-                name: USER-SERVICE
-                fallbackuri: forward:/userServiceFallBack
-        - id: DEPARTMENT-SERVICE
-          uri: lb://DEPARTMENT-SERVICE
-          predicates:
-            - Path=/department/**
-          filters:
-            - name: CircuitBreaker
-              args:
-                name: DEPARTMENT-SERVICE
-                fallbackuri: forward:/departmentServiceFallBack
-                
-         
+      
+      
+zuul:
+# service will be mapped under the '/api'  base uri
+  prefix: /api
+  routes:
+    DepartmentMicroService:
+      path: /departmentService/**
+     # url: http://localhost:7001/department  or
+      serviceId: DEPARTMENT-SERVICE
+    UserMicroService:
+      path: /usersService/**
+     # url: http://localhost:7002/users/  or
+      serviceId: USER-SERVICE
+                    
+            
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
 hystrix:
   command:
-    fallbackcmd:
+    default:
       execution:
         isolation:
           thread:
             timeoutInMilliseconds: 60000
+            
             
             
 management:
