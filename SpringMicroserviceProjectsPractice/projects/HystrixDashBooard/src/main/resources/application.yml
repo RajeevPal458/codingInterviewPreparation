@@ -1,0 +1,13 @@
+server:
+  port: 7003
+  
+spring:
+  application:
+    name: HYSTRIX-DASHBOARD
+    
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"
+
+
+    
