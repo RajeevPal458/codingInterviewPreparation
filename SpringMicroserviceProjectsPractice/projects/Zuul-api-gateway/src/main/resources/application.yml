@@ -8,6 +8,7 @@ spring:
       
 zuul:
 # service will be mapped under the '/api'  base uri
+  ignored-services: '*'
   prefix: /api
   routes:
     DepartmentMicroService:
@@ -19,10 +20,15 @@ zuul:
      # url: http://localhost:7002/users/  or
       serviceId: USER-SERVICE
                     
-            
+  ribbon:
+    eager-load:
+      enabled: true  
+      
+                
 ribbon:
   ReadTimeout: 60000
   ConnectTimeout: 60000
+  
 hystrix:
   command:
     default:
