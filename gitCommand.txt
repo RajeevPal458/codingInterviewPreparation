@@ -1,0 +1,16 @@
+How to recover repo from git if deleted from local 
+
+1) You need to initialize a new Git repository in your machine:
+$git init
+
+2) Add your remote repository (published on GitHub):
+$git remote add origin https://github.com/exampleusername/example_repo.git
+
+3) fetch the origin:
+$git fetch
+
+4) Then you can update your local branch with any branch you want:
+$git pull origin example_branch_name_you_want_to_take_update_from
+
+5) Or you can simply clone the existing remote repository as suggested in the above comments:
+$git clone https://your_repot_url
