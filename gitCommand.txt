@@ -14,3 +14,15 @@ $git pull origin example_branch_name_you_want_to_take_update_from
 
 5) Or you can simply clone the existing remote repository as suggested in the above comments:
 $git clone https://your_repot_url
+
+
+
+Resolved: Git warning LF will be replaced by CRLF in file
+March 6, 2020 10:48PM
+While using git add command I was receiving below error.
+
+warning: LF will be replaced by CRLF in ansible.cfg.
+The file will have its original line endings in your working directory
+
+git config core.autocrlf true
+http://vcloud-lab.com/entries/devops/resolved-git-warning-lf-will-be-replaced-by-crlf-in-file
