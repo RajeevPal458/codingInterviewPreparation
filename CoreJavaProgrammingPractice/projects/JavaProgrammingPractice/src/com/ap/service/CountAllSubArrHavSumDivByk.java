@@ -1,5 +1,7 @@
 package com.ap.service;
 
+//Count all sub-arrays having sum divisible by k
+
 public class CountAllSubArrHavSumDivByk {
 
 	public static void main(String[] args) {
@@ -27,7 +29,6 @@ public class CountAllSubArrHavSumDivByk {
 					count++;
 					System.out.print(" i"+i+" " +count);
 				}
-				
 			}
 			sum=0;
 			System.out.println();

@@ -1,5 +1,6 @@
 package com.ap.service;
 
+///Count of subarrays whose maximum element is greater than k
 public class CntSubArrWhsMaxElmtGrtrk {
 
 	public static void main(String[] args) {
@@ -12,7 +13,6 @@ public class CntSubArrWhsMaxElmtGrtrk {
 	private static int countSubarray(int[] arr, int n, int k) {
 		int count=0;
 		int totalSubArr=(n*(n+1))/2;
-		int elmlessk=0;
 		for(int i=0;i<n;i++){
 			
 			if(arr[i]<=k)
