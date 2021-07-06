@@ -1,0 +1,50 @@
+https://howtodoinjava.com/interview-questions/top-spring-interview-questions-with-answers/
+https://howtodoinjava.com/spring-core/
+https://www.educative.io/blog/spring-webflux-tutorial
+https://www.javatpoint.com/spring-boot-annotations
+https://www.javatpoint.com/spring-boot-starter-data-jpa
+https://maven.apache.org/
+https://maven.apache.org/guides/getting-started/
+
+Implementing JWT (JSON Web Tokens) with Spring Security in Springboot App
+
+
+
+gucci flora perfume
+
+
+
+https://www.interviewbit.com/courses/programming/topics/arrays/					
+
+	https://dzone.com/articles/how-to-achieve-oauth2-security-in-microservices-di
+	https://developer.okta.com/blog/2020/08/14/spring-gateway-patterns
+https://data-flair.training/blogs/apache-kafka-tutorial/
+
+important questons ---
+spring boot embedded database  = H2 (in memory database)
+difference between Yaml and Properties file 
+what is thymeleaf
+application.properties => spring.application.name , spring.config.name ,server.port ,
+Spring Boot Embedded Web Server  :  Tomcat , Jetty Server , Undertow Server
+Maven what is ArtifactId  and groupId
+Mockito test framwork , Simple Single Sign-On with Spring Security OAuth2
+JUnit4 test framwork
+Spring Security JWT  , oauth2
+ci cd pipeline jenkins
+devops ci/cd pipeline  https://devops.com/how-to-implement-an-effective-ci-cd-pipeline/
+Microservices 
+Docker  framwork  , Kubernate
+GIT Framwork 
+MongoDB         https://www.guru99.com/mongodb-tutorials.html  , 
+https://docs.mongodb.com/manual/core/databases-and-collections/
+GIT -  https://git-scm.com/docs/gittutorial ,https://www.tutorialspoint.com/git/git_basic_concepts.htm ,
+https://www.vogella.com/tutorials/Git/article.html
+
+Mockito Framwork - 
+Core java important questions
+
+
+
+
+
+
