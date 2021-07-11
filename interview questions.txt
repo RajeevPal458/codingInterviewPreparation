@@ -45,6 +45,26 @@ Core java important questions
 
 
 
+List<Employee>  emp ;  find duplicate 
+string str="sgggfgdjdgf"  find duplicate ;
+
+diff bet  singlton design pattern  and singlton bean
+
+<bean id="bean1"  class ="Employee" >
+<bean id="bean2"  class ="Employee" >   how many objects  will  create
+
+db table design order  product customer     (multiple products types)
+
+class A - > class B - > class c -  > class D   got exeption and how to handle
+java 8  filter Employee based on age and salary 
+
+How will you handle situation when live application down and find Outoffmemory eror
+
+what is connection pools ;
+
+what is threadProol  given situation (miceroservice Front   calling to A B C D  services parallaly)
+
+String str = "aabbbcccddssaaddffvv"  find duplicates   and delete duplicates 
 
 
 
