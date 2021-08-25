@@ -1,3 +1,11 @@
+
+work duration -> 
+chetu  :  25th Jan 2016  -  5 Jan 2018
+infogain : 10th Jan 2018  - 10 Dec 2018
+bureau veritas :  12th Dec 2018 - till now
+
+
+
 https://howtodoinjava.com/interview-questions/top-spring-interview-questions-with-answers/
 https://howtodoinjava.com/spring-core/
 https://www.educative.io/blog/spring-webflux-tutorial
@@ -21,7 +29,7 @@ https://www.interviewbit.com/courses/programming/topics/arrays/
 https://data-flair.training/blogs/apache-kafka-tutorial/
 
 important questons ---
-spring boot embedded database  = H2 (in memory database)
+spring boot embedded database  = embedded H2, HSQL and Derby databases. (in memory database)
 difference between Yaml and Properties file 
 what is thymeleaf
 application.properties => spring.application.name , spring.config.name ,server.port ,
@@ -44,7 +52,7 @@ Mockito Framwork -
 Core java important questions
 
 
-
+How to print even and odd numbers using threads in java
 List<Employee>  emp ;  find duplicate 
 string str="sgggfgdjdgf"  find duplicate ;
 
@@ -58,13 +66,147 @@ db table design order  product customer     (multiple products types)
 class A - > class B - > class c -  > class D   got exeption and how to handle
 java 8  filter Employee based on age and salary 
 
-How will you handle situation when live application down and find Outoffmemory eror
+How will you handle situation when live application down and find Outoffmemory eror : first stop server and then check all process running and kil them all clean server like some logs and and other restart again .
 
 what is connection pools ;
 
 what is threadProol  given situation (miceroservice Front   calling to A B C D  services parallaly)
 
 String str = "aabbbcccddssaaddffvv"  find duplicates   and delete duplicates 
+
+what is parallel stream java 8
+spring security jwt authorization and authenication
+time complexity for inserting an element in ArrayList
+time complexity for inserting an element in LinkedList
+time complexity for retrieving an element from LinkedList
+Transaction vihavoirs
+
+
+how to create checked custom exception 
+
+use of static block 
+
+maven scops 
+
+agile process 
+
+Where non static variables are stored in Java?
+Image result for where static variables are stored in java
+Non-Static variables and Non-Static methods are non-static components of a class. These are also called instance components of a class. Non-static components are stored inside the object memory. Each object will have their own copy of non-static components.
+
+
+
+The memory for local variables is allocated on the thread's stack, the memory for instance and class variables reside in the corresponding object's space, which is in the heap. Keep in mind, that variables only store references to objects. They do not store the object!
+
+
+
+where primitive varriables are stored : Only local primitive variables and references to object (i.e. variable declared in method) are stored in stack. Others are stored in heap
+
+What is hascode : hashCode() is used for bucketing in Hash implementations like HashMap, HashTable, HashSet, etc.
+The value received from hashCode() is used as the bucket number for storing elements of the set/map. This bucket number is the address of the element inside the set/map.
+
+What is custom Exception in java :  https://www.baeldung.com/java-new-custom-exception
+1) Custom Checked Exception:
+Checked exceptions are exceptions that need to be treated explicitly.
+
+Let’s consider a piece of code that returns the first line of the file:
+
+try (Scanner file = new Scanner(new File(fileName))) {
+    if (file.hasNextLine()) return file.nextLine();
+} catch(FileNotFoundException e) {
+    // Logging, etc 
+}
+The code above is a classic way of handling Java checked exceptions. While the code throws FileNotFoundException, it's not clear what the exact cause is — whether the file doesn't exist or the file name is invalid.
+
+To create a custom exception, we have to extend the java.lang.Exception class.
+Let’s see an example of this by creating a custom checked exception called IncorrectFileNameException:
+
+public class IncorrectFileNameException extends Exception { 
+    public IncorrectFileNameException(String errorMessage) {
+        super(errorMessage);
+    }
+}
+
+2) Custom Unchecked Exception
+In our same example, let's assume that we need a custom exception if the file name doesn't contain any extension.
+
+In this case, we'll need a custom unchecked exception similar to the previous one, as this error will only be detected during runtime.
+
+To create a custom unchecked exception, we need to extend the java.lang.RuntimeException class:
+
+public class IncorrectFileExtensionException 
+  extends RuntimeException {
+    public IncorrectFileExtensionException(String errorMessage, Throwable err) {
+        super(errorMessage, err);
+    }
+}
+
+
+Static block :
+ Java supports a special block, called static block (also called static clause) which can be used for static initializations of a class. This code inside static block is executed only once: the first time the class is loaded into memory. For example, check output of following Java program.
+ // filename: Main.java
+class Test {
+	static int i;
+	int j;
+	
+	// start of static block
+	static {
+		i = 10;
+		System.out.println("static block called ");
+	}
+	// end of static block
+}
+
+class Main {
+	public static void main(String args[]) {
+
+		// Although we don't have an object of Test, static block is
+		// called because i is being accessed in following statement.
+		System.out.println(Test.i);
+	}
+}
+
+static block called 
+10
+Also, static blocks are executed before constructors. For example, check output of following Java program.
+If a class has static members that require complex initialization, a static block is the tool to use. Suppose you need a static map of some kind (the purpose is irrelevant here). You can declare it in-line like this:
+
+public static final Map<String, String> initials = new HashMap<String, String>();
+However, if you want to populate it once, you can't do that with an in-line declaration. For that, you need a static block:
+
+public static final Map<String, String> initials = new HashMap<String, String>();
+static {
+    initials.put("AEN", "Alfred E. Newman");
+    // etc.
+}
+
+
+Define static methods in the following scenarios only:
+If you are writing utility classes and they are not supposed to be changed.
+If the method is not using any instance variable.
+If any operation is not dependent on instance creation.
+If there is some code that can easily be shared by all the instance methods, extract that code into a static method.
+If you are sure that the definition of the method will never be changed or overridden. As static methods can not be overridden.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

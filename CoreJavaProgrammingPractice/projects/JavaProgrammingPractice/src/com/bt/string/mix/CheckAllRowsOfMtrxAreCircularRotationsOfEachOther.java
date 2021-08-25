@@ -1,10 +1,18 @@
 package com.bt.string.mix;
-
+/**
+ * 
+ Input: mat[][] = 1, 2, 3
+                 3, 1, 2
+                 2, 3, 1
+                 
+ * @author rajpal
+ *
+ */
 public class CheckAllRowsOfMtrxAreCircularRotationsOfEachOther {
 
 	public static boolean checkCirculerRotation(int[][] mat,int row,int col){
 		boolean flage=true;
-		int arr[]={1,2,3};
+	
 			String str=new String();
 			for(int j=0;j<col;j++){
 				str=str.concat(mat[0][j]+"");
@@ -26,8 +34,10 @@ public class CheckAllRowsOfMtrxAreCircularRotationsOfEachOther {
 					if(pqr.equals(newrow))
 						count++;
 				}*/
-				if(!str.contains(newrow))
+				if(!str.contains(newrow)) {
 					flage=false;
+					break;
+				}
 				
 				newrow="";
 			}

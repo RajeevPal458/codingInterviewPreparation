@@ -3,10 +3,12 @@ package org.spring.security.jwt.controller;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.annotation.security.RolesAllowed;
 
 import org.spring.security.jwt.model.Employee;
 import org.spring.security.jwt.model.JwtRequest;
 import org.spring.security.jwt.model.JwtResponse;
+import org.spring.security.jwt.model.Role;
 import org.spring.security.jwt.service.EmployeeService;
 import org.spring.security.jwt.utill.Constant;
 import org.spring.security.jwt.utill.JwtTokenUtil;
@@ -16,7 +18,9 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -39,6 +43,12 @@ public class EmployeeController {
 	
 	@GetMapping("/")
 	public List<Employee> getAllEmployees(){
+		return employeeServiice.getAllEmployees();
+	}
+	
+	@DeleteMapping("/deleteEmployee/{employeeId}")
+	@RolesAllowed(Role.USER_ADMIN)
+	public List<Employee> deleteEmployee(@PathVariable(name = "employeeId") Long employeeId){
 		return employeeServiice.getAllEmployees();
 	}
 	

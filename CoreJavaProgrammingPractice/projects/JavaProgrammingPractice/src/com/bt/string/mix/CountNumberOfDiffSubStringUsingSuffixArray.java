@@ -2,6 +2,8 @@ package com.bt.string.mix;
 
 import java.util.Arrays;
 
+import com.ap.service.LongestCommonPreffixArrayUsingSuffixArray;
+
 public class CountNumberOfDiffSubStringUsingSuffixArray {
 	public static void main(String[] args) {
 		String text="ababa";

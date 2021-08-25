@@ -8,17 +8,17 @@ import java.util.Scanner;
 *Algorithm!
 *
 *COUNTING-SORT(A, B, k)
-1 for i â†? 0 to k
-2 do C[i ] â†? 0
-3 for j â†? 1 to length[A]
-4 do C[A[ j ]] â†? C[A[ j ]] + 1
+1 for i ï¿½? 0 to k
+2 do C[i ] ï¿½? 0
+3 for j ï¿½? 1 to length[A]
+4 do C[A[ j ]] ï¿½? C[A[ j ]] + 1
 5 âœ„ C[i ] now contains the number of elements equal to i .
-6 for i â†? 1 to k
-7 do C[i ] â†? C[i ] + C[i âˆ’ 1]
+6 for i ï¿½? 1 to k
+7 do C[i ] ï¿½? C[i ] + C[i âˆ’ 1]
 8 âœ„ C[i ] now contains the number of elements less than or equal to i .
-9 for j â†? length[A] downto 1
-10 do B[C[A[ j ]]] â†? A[ j ]
-11 C[A[ j ]] â†? C[A[ j ]] âˆ’ 1
+9 for j ï¿½? length[A] downto 1
+10 do B[C[A[ j ]]] ï¿½? A[ j ]
+11 C[A[ j ]] ï¿½? C[A[ j ]] âˆ’ 1
 */
 public class CountSort {
 
@@ -52,15 +52,78 @@ public class CountSort {
         /** make count/frequency array for each element **/
         for (int i = 0; i < N; i++)
             count[arr[i] - min]++;
+        System.out.println("Range:"+range+"::"+Arrays.toString(count));
         /** modify count so that positions in final array is obtained **/
         for (int i = 1; i < range; i++)
             count[i] += count[i - 1];
+        System.out.println("Range:"+range+"::"+Arrays.toString(count));
         /** modify original array **/
         int j = 0;
         for (int i = 0; i < range; i++)
             while (j < count[i])
                 arr[j++] = i + min;
     }    
+    void sort(char arr[])
+    {
+        int n = arr.length;
+ 
+        // The output character array that will have sorted arr
+        char output[] = new char[n];
+ 
+        // Create a count array to store count of inidividul
+        // characters and initialize count array as 0
+        int count[] = new int[256];
+        for (int i = 0; i < 256; ++i)
+            count[i] = 0;
+ 
+        // store count of each character
+        for (int i = 0; i < n; ++i)
+            ++count[arr[i]];
+ 
+        // Change count[i] so that count[i] now contains actual
+        // position of this character in output array
+        for (int i = 1; i <= 255; ++i)
+            count[i] += count[i - 1];
+ 
+        // Build the output character array
+        // To make it stable we are operating in reverse order.
+        for (int i = n - 1; i >= 0; i--) {
+            output[count[arr[i]] - 1] = arr[i];
+            --count[arr[i]];
+        }
+ 
+        // Copy the output array to arr, so that arr now
+        // contains sorted characters
+        for (int i = 0; i < n; ++i)
+            arr[i] = output[i];
+    }
+    
+
+    static void countSort(int[] arr)
+    {
+        int max = Arrays.stream(arr).max().getAsInt();
+        int min = Arrays.stream(arr).min().getAsInt();
+        int range = max - min + 1;
+        int count[] = new int[range];
+        int output[] = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            count[arr[i] - min]++;
+        }
+        System.out.println(Arrays.toString(count));
+ 
+        for (int i = 1; i < count.length; i++) {
+            count[i] += count[i - 1];
+        }
+        System.out.println(Arrays.toString(count));
+        for (int i = arr.length - 1; i >= 0; i--) {
+            output[count[arr[i] - min] - 1] = arr[i];
+            count[arr[i] - min]--;
+        }
+        System.out.println(Arrays.toString(output));
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = output[i];
+        }
+    }
     /** Main method **/
     public static void main(String[] args) 
     {
@@ -77,7 +140,7 @@ public class CountSort {
         for (i = 0; i < n; i++)
             arr[i] = scan.nextInt();
         /** Call method sort **/
-        sort(arr);
+        countSort(arr);
         /** Print sorted Array **/
         System.out.println("\nElements after sorting ");        
         for (i = 0; i < n; i++)

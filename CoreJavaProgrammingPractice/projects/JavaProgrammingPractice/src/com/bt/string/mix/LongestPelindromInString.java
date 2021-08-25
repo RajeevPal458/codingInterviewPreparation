@@ -107,7 +107,7 @@ public class LongestPelindromInString {
 		}
 	}
 	public static void main(String[] args) {
-		String x = "asforgeeksskeegfor";
+		String x = "adabccbabad";
 		String[] suffx = new String[x.length()+1];
 		String[] peffx = new String[x.length()+1];
 		getSuffixOfString(x,suffx);
