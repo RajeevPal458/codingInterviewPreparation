@@ -37,6 +37,8 @@ https://www.hackerrank.com/challenges/crush/problem
 
 1 2 4 3 5
 
+Docker commands --------------
+https://www.edureka.co/blog/docker-commands/
 
 
 

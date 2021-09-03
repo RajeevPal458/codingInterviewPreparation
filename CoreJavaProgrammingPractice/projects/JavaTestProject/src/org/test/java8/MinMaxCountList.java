@@ -26,7 +26,7 @@ public class MinMaxCountList {
 		
 		int min = employees.stream().min((a,b) -> (a-b)).get();
 		
-		int max = employees.stream().min((a,b) -> -(a-b)).get();
+		int max = employees.stream().max((a,b) -> (a-b)).get();
 		
 		System.out.println(":count:"+count+":min:"+min+":max:"+max);
 		

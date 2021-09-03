@@ -17,7 +17,9 @@ public class GroupByNameTest {
 		employees.add(new Employee(5, "Nirmala", "singh", "nV"));
 		employees.add(new Employee(3, "Kamlesh", "dube", "PS"));
 		
-		Map<String, Long> employeeFirstNameCount=employees.stream().sorted(Comparator.comparing(Employee::getFirstName)).collect(Collectors.groupingBy(p -> p.getFirstName(), Collectors.counting()));
+		Map<String, Long> employeeFirstNameCount=employees.stream().
+				sorted(Comparator.comparing(Employee::getFirstName)).
+				collect(Collectors.groupingBy(p -> p.getFirstName(), Collectors.counting()));
 		employeeFirstNameCount.forEach((k,v) -> System.out.println(":k:"+k+":v:"+v));
 		
 	}

@@ -27,7 +27,7 @@ public class MapToListOfKeysSortedByValues {
         .map(e -> e.getKey())
         .collect(Collectors.toList());
 		
-		System.out.println();
+		System.out.println(mapkeys);
 		
 		List<String> mapkeys1=countByType.entrySet()
 		        .stream()

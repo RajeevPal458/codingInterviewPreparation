@@ -7,8 +7,8 @@ import java.util.Optional;
 public class OptionalInterfaceTest {
 
 	public static void main(String[] args) {
-		Employee employee1 =new Employee(5, "sarvesh", "Pal", "AirForce");
 		Employee employee2=null;
+		Employee employee1 =new Employee(5, "sarvesh", "Pal", "AirForce");
 	
 		Optional<Employee> optional1 = Optional.ofNullable(employee2);
 		Optional<Employee> optional2 = Optional.ofNullable(employee1);
@@ -19,5 +19,15 @@ public class OptionalInterfaceTest {
 		System.out.println("orElseGet with empty object "+optional1.orElseGet(()->new Employee(6, "pink", "color", "pinkolor")).getFirstName());
 		System.out.println("orElseGet with non empty object "+optional2.orElseGet(()->new Employee(7, "dog", "animal", "dogAnimal")).getFirstName());
 		
+		if(optional1.isEmpty()) {
+			System.out.println("optional1 is empty");
+		}else {
+			System.out.println("optional1 non empty");
+		}
+		if(optional2.isPresent()) {
+			System.out.println("optional1 non empty");
+		}else {
+			System.out.println("optional1 is empty");
+		}
 	}
 }

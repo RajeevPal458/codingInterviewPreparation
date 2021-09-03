@@ -23,8 +23,8 @@ public class DisplayApp {
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
                         (oldValue, newValue) -> oldValue, LinkedHashMap::new));
 
-        collect.forEach((k, v) -> System.out.println(k + ":" + v));
-        collect.entrySet().forEach( e -> System.out.print(":k:"+e.getKey()));
+        collect.forEach((k, v) -> System.out.println(k + ":-----------" + v));
+        collect.entrySet().forEach( e -> System.out.print(":k:----"+e.getKey()));
 
     }
 }

@@ -28,6 +28,11 @@ https://www.interviewbit.com/courses/programming/topics/arrays/
 	https://developer.okta.com/blog/2020/08/14/spring-gateway-patterns
 https://data-flair.training/blogs/apache-kafka-tutorial/
 
+
+
+
+
+https://www.interviewbit.com/puzzles/
 important questons ---
 spring boot embedded database  = embedded H2, HSQL and Derby databases. (in memory database)
 difference between Yaml and Properties file 
@@ -51,15 +56,35 @@ https://www.vogella.com/tutorials/Git/article.html
 Mockito Framwork - 
 Core java important questions
 
-
+cross origin in spring 
+what is swagger .
+https://java2blog.com/java-collections-interview-questions/
 How to print even and odd numbers using threads in java
 List<Employee>  emp ;  find duplicate 
 string str="sgggfgdjdgf"  find duplicate ;
+Mock final class .
+mock static methods .
+test void method using mockito
+
+Spring Class A is singlton inside  class B that's prototype 
+Spring Class B is prototype inside  class A thats Singlton { all works as singlton use ApplicationContextAware}
+is spring bean thread safe .
+
+Employee    Department
+empId       depId
+name        departmentName , empId
+find number of employee from it department
+number of employee in each depertment
+which development model you are following : agile 
+
 
 diff bet  singlton design pattern  and singlton bean
 
 <bean id="bean1"  class ="Employee" >
-<bean id="bean2"  class ="Employee" >   how many objects  will  create
+<bean id="bean2"  class ="Employee" >   how many objects  will  create{
+A Spring Singleton does not work like a Java Singleton.
+If we see the output of the program, we will understand that it will return two different instances, So in a container, th
+}
 
 db table design order  product customer     (multiple products types)
 

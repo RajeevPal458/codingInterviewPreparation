@@ -17,6 +17,8 @@ public class JavaTester {
 		employees.add(new Employee(4, "Kamlesh", "yadav", "Pv"));
 		employees.add(new Employee(2, "Nirmala", "pal", "DV"));
 		employees.add(new Employee(3, "Kamal", "dube", "PS"));
+		employees.add(new Employee(5, "Kamal", "aa", "PS"));
+		employees.add(new Employee(6, "Rajeev", "Pal", "BV"));
 		
 /*		 Map<Integer, Employee> map = employees
 				    .stream()
@@ -34,7 +36,9 @@ public class JavaTester {
 				        Employee::getFirstName));
 				  System.out.println(map1 + "\n");*/
 		
-	Map<String, Employee> empMap=	employees.stream().sorted((e1,e2) -> e1.getFirstName().compareTo(e2.getFirstName())).sorted((e1,e2) -> e1.getLastName().compareTo(e2.getLastName())).collect(Collectors.toMap(Employee::getFirstName, employee->employee ,
+	Map<String, Employee> empMap=	employees.stream().sorted((e1,e2) -> e1.getFirstName()
+			.compareTo(e2.getFirstName())).sorted((e1,e2) -> e1.getLastName().compareTo(e2.getLastName()))
+			.collect(Collectors.toMap(Employee::getFirstName, employee->employee ,
             (oldValue, newValue) -> oldValue, LinkedHashMap::new ));
 	empMap.entrySet().stream().forEach((entry)->{System.out.println("key:"+entry.getKey()+":Value:"+entry.getValue());});
 	

@@ -21,6 +21,7 @@ public class ListToMap {
 		employees1.add("BA");
 		employees1.add("BADC");
 		employees1.add("CAD");
+		employees1.add("CAD");
 		
 		Map<String, Employee> employeeMap=employees.stream().collect(Collectors.toMap(Employee::getCompanyName, employee->employee));
 		
@@ -29,7 +30,7 @@ public class ListToMap {
 		///
 		System.out.println();
 		System.out.println();
-		Map<Integer, List<String>> employeeMap1=employees1.stream().collect(Collectors.groupingBy(String::length, TreeMap::new , Collectors.toList()));
+		Map<Integer, List<String>> employeeMap1=employees1.stream().collect(Collectors.groupingBy(String::length, Collectors.toList()));
 		
 		employeeMap1.forEach((e1,e2) -> System.out.println(":key:"+e1+":value:"+e2));
 		

@@ -1,7 +1,7 @@
 package com.bt.string.mix;
 
 import java.util.Arrays;
-
+//
 public class PrintAllPermutationOfStringInLexicographicOrder{
 	public static int findCeilIndex(char[] arr,int first,int l,int n){
 		int ceilindex=l;
@@ -37,7 +37,7 @@ public class PrintAllPermutationOfStringInLexicographicOrder{
 		arr[j]=temp;
 	}
 	public static void main(String[] args) {
-		String str="aaa";
+		String str="abcd";
 		int n=str.length();
 		findpermutation(str.toCharArray(),n,3);
 	}
