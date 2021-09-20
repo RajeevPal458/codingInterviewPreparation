@@ -41,6 +41,7 @@ public class FindFirstStringIsSubSequenceOfSecond {
 		return flage;
 	}
 	
+	
 	public static void main(String[] args) {
 		String s1="AXY";
 		String s2="ADXCPY";

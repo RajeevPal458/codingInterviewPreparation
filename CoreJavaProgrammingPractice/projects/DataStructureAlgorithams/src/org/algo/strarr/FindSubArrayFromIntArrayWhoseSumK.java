@@ -9,11 +9,16 @@ public class FindSubArrayFromIntArrayWhoseSumK {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] str = {2,7, 3, 4, 9, 12, 1 };
+		int[] arr = {2,7, 3, 4, 9, 12 ,1};
 		
-		int sum = 13;
+		int maxsum = 13;
+		int len = arr.length;
+		//subArray(arr , len, maxsum);
+		//boolean flag = sumOfSubSetRecursive(arr, len, 0, 0, maxsum);
 		
-		subArray(str , str.length, sum);
+		//System.out.println("is subset avail :"+flag);
+		int[] temp = new int[len];
+		sumOfSubSetRecursiveBackTrack(arr, len, 0, 0, maxsum, temp,false);
 	}
 
 	private static void subArray1(int[] arr , int len, int maxsum) {
@@ -70,15 +75,48 @@ public class FindSubArrayFromIntArrayWhoseSumK {
 		}
 	    if(j==-1) {
 	    	System.out.println("{ "+arr[i]+" }");
-	    }else {
+	    }else if(flag){
 	    	System.out.print("{");
 			for(int start=i;start<=j;start++) {
 				System.out.print(arr[start]+" ");
 			}
 			System.out.print("}");
+	    }else {
+	    	System.out.println("Not found");
 	    }
 	}
 	
+	public  static boolean sumOfSubSetRecursive(int[] arr , int len,int i,int sum, int maxsum) {
+		
+		if(sum >maxsum) return false;
+		
+		if(sum==maxsum) return true;
+		
+		if(i>=len) return false;
+		
+		if(sumOfSubSetRecursive(arr, len,i+1 ,sum+arr[i], maxsum))return true;
+		
+		return sumOfSubSetRecursive(arr, len,i+1 ,sum, maxsum);
+		
+	}
+	
+	public static void sumOfSubSetRecursiveBackTrack(int[] arr , int len,int i,int sum, int maxsum , int[] temp ,boolean flag) {
+		
+		if(sum==maxsum && flag) {
+			System.out.println(Arrays.toString(temp));
+		}
+		if(sum>maxsum) return ;
+		
+		if(i<len) {
+			temp[i] =arr[i];
+			flag=true;
+			sumOfSubSetRecursiveBackTrack(arr, len,i+1 ,sum+arr[i], maxsum ,temp,flag);
+			temp[i] =0;
+			flag=false;
+			sumOfSubSetRecursiveBackTrack(arr, len,i+1 ,sum, maxsum ,temp,flag);
+		}
+		
+	}
 
 }
 

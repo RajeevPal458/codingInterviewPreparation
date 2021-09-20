@@ -9,11 +9,11 @@ public class SortEmployeeByFirstNameAndLastName {
 
 	public static void main(String[] args) {
 		List<Employee> employees = new ArrayList<>();
-		employees.add(new Employee(1, "Rajeev", "Pal", "BV"));
-		employees.add(new Employee(4, "Kamlesh", "yadav", "Pv"));
-		employees.add(new Employee(2, "Nirmala", "pal", "DV"));
-		employees.add(new Employee(5, "Nirmala", "singh", "nV"));
-		employees.add(new Employee(3, "Kamlesh", "dube", "PS"));
+		employees.add(new Employee(1, "Rajeev", "Pal", "BV",10));
+		employees.add(new Employee(4, "Kamlesh", "yadav", "Pv",10));
+		employees.add(new Employee(2, "Nirmala", "pal", "DV",10));
+		employees.add(new Employee(5, "Nirmala", "singh", "nV",10));
+		employees.add(new Employee(3, "Kamlesh", "dube", "PS",10));
 		employees=employees.stream().sorted(Comparator.comparing(Employee::getFirstName).thenComparing(Employee::getLastName)).collect(Collectors.toList());
 		employees.stream().forEach(System.out::println);     
 		

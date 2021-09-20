@@ -1,6 +1,7 @@
 package org.test.java8;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,12 +14,12 @@ public class JavaTester {
 	public static void main(String[] args) {
 		
 		List<Employee> employees = new ArrayList<>();
-		employees.add(new Employee(1, "Rajeev", "Pal", "BV"));
-		employees.add(new Employee(4, "Kamlesh", "yadav", "Pv"));
-		employees.add(new Employee(2, "Nirmala", "pal", "DV"));
-		employees.add(new Employee(3, "Kamal", "dube", "PS"));
-		employees.add(new Employee(5, "Kamal", "aa", "PS"));
-		employees.add(new Employee(6, "Rajeev", "Pal", "BV"));
+		employees.add(new Employee(1, "Rajeev", "Pal", "BV",10));
+		employees.add(new Employee(4, "Kamlesh", "yadav", "Pv",10));
+		employees.add(new Employee(2, "Nirmala", "pal", "DV",10));
+		employees.add(new Employee(3, "Kamal", "dube", "PS",10));
+		employees.add(new Employee(5, "Kamal", "aa", "PS",10));
+		employees.add(new Employee(6, "Rajeev", "Pal", "BV",10));
 		
 /*		 Map<Integer, Employee> map = employees
 				    .stream()
@@ -36,8 +37,7 @@ public class JavaTester {
 				        Employee::getFirstName));
 				  System.out.println(map1 + "\n");*/
 		
-	Map<String, Employee> empMap=	employees.stream().sorted((e1,e2) -> e1.getFirstName()
-			.compareTo(e2.getFirstName())).sorted((e1,e2) -> e1.getLastName().compareTo(e2.getLastName()))
+	Map<String, Employee> empMap=	employees.stream().sorted(Comparator.comparing(Employee::getFirstName).thenComparing(Comparator.comparing(Employee::getLastName)))
 			.collect(Collectors.toMap(Employee::getFirstName, employee->employee ,
             (oldValue, newValue) -> oldValue, LinkedHashMap::new ));
 	empMap.entrySet().stream().forEach((entry)->{System.out.println("key:"+entry.getKey()+":Value:"+entry.getValue());});

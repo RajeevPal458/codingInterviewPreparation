@@ -1,20 +1,24 @@
 package org.test.java8;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.function.Function;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
+//https://javaconceptoftheday.com/solving-real-time-queries-using-java-8-features-employee-management-system/
 public class ListToMap {
 
 	public static void main(String[] args) {
 		
 		List<Employee> employees = new ArrayList<>();
-		employees.add(new Employee(1, "Rajeev", "Pal", "BV"));
-		employees.add(new Employee(4, "Kamlesh", "yadav", "Pv"));
-		employees.add(new Employee(2, "Nirmala", "pal", "DV"));
-		employees.add(new Employee(3, "Kamal", "dube", "PS"));
+		employees.add(new Employee(1, "Rajeev", "Pal", "BV",10));
+		employees.add(new Employee(4, "Kamlesh", "yadav", "BV",20));
+		employees.add(new Employee(2, "Nirmala", "pal", "DV",25));
+		employees.add(new Employee(3, "Kamal", "dube", "DV",35));
 		
 		List<String> employees1 = new ArrayList<>();
 		employees1.add("A");
@@ -22,6 +26,16 @@ public class ListToMap {
 		employees1.add("BADC");
 		employees1.add("CAD");
 		employees1.add("CAD");
+		
+		Map<String, Employee> map11=employees.stream().collect(Collectors.toMap(Employee::getFirstName, Function.identity()));
+		Map<String, Double> map12=null;
+		
+		try {
+			map12=employees.stream().collect(Collectors.groupingBy(Employee::getCompanyName, TreeMap::new , Collectors.summingDouble(Employee::getSalary)));
+		} catch (Exception e) {
+		}
+		map12.forEach((e1,e2) -> System.out.println("key:"+e1+"  Value:"+e2));
+		
 		
 		Map<String, Employee> employeeMap=employees.stream().collect(Collectors.toMap(Employee::getCompanyName, employee->employee));
 		

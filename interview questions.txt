@@ -30,7 +30,8 @@ https://data-flair.training/blogs/apache-kafka-tutorial/
 
 
 
-
+Do you have experience in WebSphere Portal Server?*
+What Is The Most Challenging Project You Have Worked On?
 
 https://www.interviewbit.com/puzzles/
 important questons ---
@@ -77,6 +78,7 @@ find number of employee from it department
 number of employee in each depertment
 which development model you are following : agile 
 
+Q .what are thread pools 
 
 diff bet  singlton design pattern  and singlton bean
 
@@ -217,6 +219,35 @@ If you are sure that the definition of the method will never be changed or overr
 
 
 
+
+· You have at least 5+ years of experience in back-end development on a large scale, preferably typed language and have followed OOPS and SOLID principles (any programming language).
+
+· Strong understanding of Data Structures (Array, hash set, linked list, etc) and knowledge of time complexities of their different operations.
+
+· Strong understanding of OOPS concepts.
+
+· Good to have experience in Node.js, Typescript.
+
+· Good to have experience in AWS in a production environment and understand how to design for, deploy on and get the best out of, the environment and services provided by Amazon.
+
+· Security is at the forefront of your mind in everything that you do.
+
+4- 9 years of strong development skills in Core Java, Java 8, Microservices, Cloud along with Docker or Kubernetes
+Thorough understanding of OOPS, SOLID Design principles and implementation of different type of Design patterns.
+
+ Core Java: CORE Java, OOPs, J2EE (Spring, Spring Boot) ,  Web services (REST), Ant/Maven,
+o    Code Quality: Unit Testing ( Junit 4/5 + Mockito), Code quality check Tools ( SonarQube, Sona type)
+o    Source code repository: VSTS, SVN, GIT, TFS etc.
+o    Application hosting servers: Tomcat/WAS/any other
+•    Cloud Technologies:
+•     Data Bases
+o    Strong understanding and working knowledge of any Relational (MS SQL Server, Aurora) and Non-Relational (MongoDB) databases
+•     Strong Knowledge on Microservice Development
+
+cloud watch , ec2 instances 
+https://www.javainuse.com/webseries/spring-security-jwt/chap7
+https://www.javainuse.com/webseries/spring-security-jwt/chap4
+https://www.bezkoder.com/spring-boot-refresh-token-jwt/
 
 
 
