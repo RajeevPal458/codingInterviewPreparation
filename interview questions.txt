@@ -57,7 +57,13 @@ https://www.vogella.com/tutorials/Git/article.html
 Mockito Framwork - 
 Core java important questions
 
-cross origin in spring 
+cross origin in spring .
+
+
+Flutter developer amazon lamda  mongodb  S3  Git ", " Jenkins "
+
+what is use of jProfiler .
+
 what is swagger .
 https://java2blog.com/java-collections-interview-questions/
 How to print even and odd numbers using threads in java
@@ -248,6 +254,22 @@ cloud watch , ec2 instances
 https://www.javainuse.com/webseries/spring-security-jwt/chap7
 https://www.javainuse.com/webseries/spring-security-jwt/chap4
 https://www.bezkoder.com/spring-boot-refresh-token-jwt/
+
+Hi Kiran ,
+
+Please find below answers to your questions in the same sequence as above.
+
+1) working with different -2 technologies and project domains and yes , i would also like to be a team lead if found any opportunity.
+2) Seeking for the opportunity to work with new technologies and tools .
+3) In next Role i would like to be team lead with development for giving contribution in full life cycle of project developments
+
+Regards
+Rajeev pal 
+
+Rajeev on 4th October at 7.15 PM  KPIT 
+Iris 3 pm ,
+Hcl 4 PM ,
+11 AM  other company
 
 
 

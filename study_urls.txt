@@ -26,7 +26,8 @@ Merge two sorted linked lists such that merged list is in reverse order
 Reverse alternate K nodes in a Singly Linked List
 Rearrange a linked list in to alternate first and last element
 Alternate sorting of Linked list
-Minimum number of swaps required to sort an array
+Minimum number 
+of swaps required to sort an array
 
 https://www.hackerrank.com/challenges/crush/problem
 2 5 1 3 4
