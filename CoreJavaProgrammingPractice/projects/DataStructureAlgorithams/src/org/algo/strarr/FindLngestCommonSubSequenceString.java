@@ -1,7 +1,8 @@
 package org.algo.strarr;
 
 import java.util.Arrays;
-
+//https://www.geeksforgeeks.org/longest-common-subsequence-dp-4/
+//https://www.geeksforgeeks.org/printing-longest-common-subsequence/
 public class FindLngestCommonSubSequenceString {
 
 	public static void main(String[] args) {

@@ -19,12 +19,12 @@ public class kadaneAlgorithms {
 		for(int i=0;i<arr.length;i++) {
 			max_so_far +=arr[i];
 			
-			if(max_so_far>max) {
+			if(max_so_far<0){
+				max_so_far = 0;
+			}else if(max_so_far>max) {
 				max = max_so_far;
 				System.out.println(i);
 			}
-			if(max_so_far<0)
-				max_so_far = 0;
 		}
 		return max;
 	}

@@ -35,9 +35,21 @@ public class TesterMain {
 		MergeSort.sort(mergesortArr);
 		PrintArray.printIntArr(mergesortArr); */
 		
-		int[] quickArr={3,2,5,4,7,6,9,1,8 ,10};
+		/*int[] quickArr={3,2,5,4,7,6,9,1,8 ,10};
 		QuickSort.sort(quickArr);
-		PrintArray.printIntArr(quickArr);
+		PrintArray.printIntArr(quickArr);*/
+		
+		/* char charArr[] = { 'g', 'e', 'e', 'k', 's', 'f', 'o',
+	                'r', 'g', 'e', 'e', 'k', 's' };
+	        int range=256;
+	        CountSort.sort(charArr ,range);
+	        PrintArray.printIntArr(charArr);*/
+		
+		 int[] heapArr= {3,2,5,4,7,6,9,1,8 ,10};
+			HeapSort.sort(heapArr);
+			PrintArray.printIntArr(heapArr);
+			
+			
 		
 	}
 

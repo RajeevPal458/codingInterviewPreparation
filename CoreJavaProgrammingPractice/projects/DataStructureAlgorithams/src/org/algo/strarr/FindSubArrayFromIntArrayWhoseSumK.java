@@ -13,12 +13,13 @@ public class FindSubArrayFromIntArrayWhoseSumK {
 		
 		int maxsum = 13;
 		int len = arr.length;
-		//subArray(arr , len, maxsum);
+		subArray(arr , len, maxsum);
+		subArray1(arr , len, maxsum);
 		//boolean flag = sumOfSubSetRecursive(arr, len, 0, 0, maxsum);
 		
 		//System.out.println("is subset avail :"+flag);
-		int[] temp = new int[len];
-		sumOfSubSetRecursiveBackTrack(arr, len, 0, 0, maxsum, temp,false);
+		//int[] temp = new int[len];
+		//sumOfSubSetRecursiveBackTrack(arr, len, 0, 0, maxsum, temp,false);
 	}
 
 	private static void subArray1(int[] arr , int len, int maxsum) {

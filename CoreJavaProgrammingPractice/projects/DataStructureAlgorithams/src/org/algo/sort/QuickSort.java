@@ -4,6 +4,11 @@ import java.util.Arrays;
 
 public class QuickSort {
 
+	public static void main(String[] args) {
+		int[] arr={3,2,5,1,6,9,4};
+		sort(arr);
+		System.out.println(":arr:"+Arrays.toString(arr));
+	}
 	public static void sort(int[] quickArr) {
 
 		int n = quickArr.length-1;
@@ -22,6 +27,32 @@ public class QuickSort {
 		
 	}
 
+	private static int findPivot1(int[] arr, int low, int high) {
+		// TODO Auto-generated method stub
+		int pivot = arr[low];
+		int i=low+1;
+		int j=high;
+		while (i<=j) {
+			while (i<=high&&arr[i]<pivot) {
+				i++;
+			}
+			
+			while (j>=0&&arr[j]>pivot) {
+				j--;
+			}
+			if(i<=j){
+				int temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+				i++;j--;
+			}
+		}
+		int temp= arr[low];
+		arr[low] = arr[j];
+		arr[j] =temp;
+		return j;
+	}
+
 	private static int findPivot(int[] arr, int low, int high) {
 	    int pivot = arr[high];
 	    int i = (low - 1);
@@ -31,8 +62,9 @@ public class QuickSort {
 	        if (arr[j] <= pivot)
 	        {
 	            i++;
-	            System.out.println(":i:"+i+":j:"+j);
+	            System.out.print(":i:"+i+":j:"+j);
 	            SwapInArray.swapIndexValue(arr, i, j);
+	            System.out.println(": arr :"+Arrays.toString(arr));
 	        }
 	    }
 	    SwapInArray.swapIndexValue(arr, i + 1, high);

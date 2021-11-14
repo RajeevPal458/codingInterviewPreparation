@@ -1,7 +1,7 @@
 package org.algo.strarr;
 
 import java.util.Arrays;
-
+//https://www.geeksforgeeks.org/longest-common-substring-dp-29/
 public class FindLngestCommonSubstringGivenTwoString {
 
 	public static void main(String[] args) {

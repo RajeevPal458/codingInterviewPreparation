@@ -11,7 +11,7 @@ public class HeapSort {
 			HeapSort.hippyfy(heapArr ,i ,len);
 		}
 		System.out.println("Heap created !");
-		for(int i=len-1;i >00;i--){
+		for(int i=len-1;i >0;i--){
 			int  lastnum =heapArr[i];
 			heapArr[i] = heapArr[0];
 			heapArr[0] = lastnum ;
@@ -33,6 +33,7 @@ public class HeapSort {
 			max=right;
 		}
 		
+		System.out.println("max:"+max);
 		if(max !=i){
 			int temp  =arr[i];
 			arr[i] =arr[max];

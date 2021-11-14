@@ -27,19 +27,22 @@ public class KadaneAlgorithm {
 
 		int res_max_sum=0;
 		int current_max_sum = 0;
-		
+		int start = 0,end=0;
 		for (int i = 0; i < arr.length; i++) {
 			current_max_sum +=arr[i];
 			
 			if(current_max_sum < 0){
 				current_max_sum = 0;
+				start=i+1;
 			}else{
 				if(current_max_sum > res_max_sum){
-					System.out.println("index:"+i);    // this describe the sub array
+					System.out.println("index:"+i); 
+					end=i;// this describe the sub array
 					res_max_sum = current_max_sum;
 				}
 			}
 		}
+		System.out.println("("+start+" , "+ end+")");
 		return res_max_sum;
 	}
 }
