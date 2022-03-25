@@ -1,0 +1,27 @@
+https://www.youtube.com/watch?v=Maajo9XHGhk&list=PLfw-ArrOoOE53xh-GA1v8TGC3ms93Qlo-&index=2
+https://www.youtube.com/watch?v=39CenBTuffI
+https://www.youtube.com/watch?v=lV48UiSRaNM
+https://www.youtube.com/watch?v=g9W1E887tWw
+
+chess game design
+revise puzzles
+Design a Library management System
+
+System design question – need to design to detect anomaly in stock purchasing:- 
+need to store previous stock purchase in a different table and use that
+
+Find number of all unique anagrams of given strings
+
+Find path to reach at end of matrix (m,n) in least cost from (0,0)
+
+HashTable internal working 
+
+print series 010203040506.. using multi-threading 1st thread will print only 0 2nd thread 
+will print only even numbers and 3rd thread print only odd numbers. Some SQL queries normal 
+JOIN queries. Synchronize block vs Synchronize method
+
+Trapping Rain Water
+
+Merge Overlapping Intervals
+
+https://leetcode.com/problems/rotting-oranges/submissions/    leetcode sub problems

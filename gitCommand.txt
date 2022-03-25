@@ -3,6 +3,10 @@ How to recover repo from git if deleted from local
 1) You need to initialize a new Git repository in your machine:
 $git init
 
+2) $git config --global user.name "RajeevPal458" 
+
+$git config --global user.email "Rajeevkumar.kp100@gmail.com"
+
 2) Add your remote repository (published on GitHub):
 $git remote add origin https://github.com/exampleusername/example_repo.git
 

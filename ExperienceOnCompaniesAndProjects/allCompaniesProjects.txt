@@ -1,0 +1,16 @@
+First Company :  Hyderabad (FK)
+
+Start from 25th Jan 2016   to  Nov 2017
+Project : -  FHLBNY ( Federal Home Loan Bank of New York )
+Description : worked on admin portal and some of like tech change to java written services and data sync using ActiveMQ and serviceMix and some cron jobs schedulers .
+
+
+Second Company : Chetu India Pvt Ltd (Noida) .
+
+Third Company : Infogain
+
+Fourth Company : Bureau Veritas
+
+Fifth Company : Landmark Group 
+
+

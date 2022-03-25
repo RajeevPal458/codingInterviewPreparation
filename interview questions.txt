@@ -1,3 +1,6 @@
+https://practice.geeksforgeeks.org/explore?page=8&company[]=Amazon&sortBy=submissions.
+
+
 
 work duration -> 
 chetu  :  25th Jan 2016  -  5 Jan 2018
@@ -14,7 +17,7 @@ https://www.javatpoint.com/spring-boot-starter-data-jpa
 https://maven.apache.org/
 https://maven.apache.org/guides/getting-started/
 
-Implementing JWT (JSON Web Tokens) with Spring Security in Springboot App
+
 
 
 
@@ -27,12 +30,12 @@ https://www.interviewbit.com/courses/programming/topics/arrays/
 	https://dzone.com/articles/how-to-achieve-oauth2-security-in-microservices-di
 	https://developer.okta.com/blog/2020/08/14/spring-gateway-patterns
 https://data-flair.training/blogs/apache-kafka-tutorial/
-
-
-
 Do you have experience in WebSphere Portal Server?*
-What Is The Most Challenging Project You Have Worked On?
 
+
+
+Implementing JWT (JSON Web Tokens) with Spring Security in Springboot App
+What Is The Most Challenging Project You Have Worked On?
 https://www.interviewbit.com/puzzles/
 important questons ---
 spring boot embedded database  = embedded H2, HSQL and Derby databases. (in memory database)
@@ -56,14 +59,9 @@ https://www.vogella.com/tutorials/Git/article.html
 
 Mockito Framwork - 
 Core java important questions
-
 cross origin in spring .
-
-
 Flutter developer amazon lamda  mongodb  S3  Git ", " Jenkins "
-
 what is use of jProfiler .
-
 what is swagger .
 https://java2blog.com/java-collections-interview-questions/
 How to print even and odd numbers using threads in java
@@ -72,59 +70,55 @@ string str="sgggfgdjdgf"  find duplicate ;
 Mock final class .
 mock static methods .
 test void method using mockito
-
 Spring Class A is singlton inside  class B that's prototype 
 Spring Class B is prototype inside  class A thats Singlton { all works as singlton use ApplicationContextAware}
 is spring bean thread safe .
 
+SQL Query Questions-------
 Employee    Department
 empId       depId
 name        departmentName , empId
-find number of employee from it department
-number of employee in each depertment
-which development model you are following : agile 
 
-Q .what are thread pools 
+Q. find number of employee from it department , number of employee in each depertment
+Q. which development model you are following : agile 
+Q. what are thread pools 
 
-diff bet  singlton design pattern  and singlton bean
-
+Q. diff bet  singlton design pattern  and singlton bean
 <bean id="bean1"  class ="Employee" >
 <bean id="bean2"  class ="Employee" >   how many objects  will  create{
 A Spring Singleton does not work like a Java Singleton.
 If we see the output of the program, we will understand that it will return two different instances, So in a container, th
 }
 
-db table design order  product customer     (multiple products types)
 
-class A - > class B - > class c -  > class D   got exeption and how to handle
-java 8  filter Employee based on age and salary 
+db table design order product customer     (multiple products types)
 
-How will you handle situation when live application down and find Outoffmemory eror : first stop server and then check all process running and kil them all clean server like some logs and and other restart again .
+Q. class A - > class B - > class c -  > class D   got exeption and how to handle
+Q. java 8  filter Employee based on age and salary 
 
-what is connection pools ;
+Q. How will you handle situation when live application down and find Outoffmemory eror : first stop server and then check all process running and kil them all clean server like some logs and and other restart again .
 
-what is threadProol  given situation (miceroservice Front   calling to A B C D  services parallaly)
+Q. what is connection pools ;
+Q. what is threadProol  given situation (miceroservice Front   calling to A B C D  services parallaly)
 
-String str = "aabbbcccddssaaddffvv"  find duplicates   and delete duplicates 
+Q. String str = "aabbbcccddssaaddffvv"  find duplicates   and delete duplicates 
+Q. what is parallel stream java 8
+Q. spring security jwt authenication. And how do you authorization request.
 
-what is parallel stream java 8
-spring security jwt authorization and authenication
-time complexity for inserting an element in ArrayList
-time complexity for inserting an element in LinkedList
-time complexity for retrieving an element from LinkedList
+Q. time complexity for inserting an element in ArrayList
+Q. time complexity for inserting an element in LinkedList
+Q. time complexity for retrieving an element from LinkedList
 Transaction vihavoirs
-
-
-how to create checked custom exception 
-
-use of static block 
+Q. how to create checked custom exception 
+Q. use of static block 
 
 maven scops 
 
 agile process 
-
 Where non static variables are stored in Java?
+
 Image result for where static variables are stored in java
+
 Non-Static variables and Non-Static methods are non-static components of a class. These are also called instance components of a class. Non-static components are stored inside the object memory. Each object will have their own copy of non-static components.
 
 
@@ -214,46 +208,15 @@ static {
 }
 
 
-Define static methods in the following scenarios only:
-If you are writing utility classes and they are not supposed to be changed.
-If the method is not using any instance variable.
-If any operation is not dependent on instance creation.
-If there is some code that can easily be shared by all the instance methods, extract that code into a static method.
-If you are sure that the definition of the method will never be changed or overridden. As static methods can not be overridden.
+SOLID Design principles ,CORE Java, J2EE (Spring, Spring Boot) , Web services (REST), Ant/Maven,
+Code Quality: Unit Testing ( Junit 4/5 + Mockito), Code quality check Tools ( SonarQube, Sona type)
 
-
-
-
-
-
-· You have at least 5+ years of experience in back-end development on a large scale, preferably typed language and have followed OOPS and SOLID principles (any programming language).
-
-· Strong understanding of Data Structures (Array, hash set, linked list, etc) and knowledge of time complexities of their different operations.
-
-· Strong understanding of OOPS concepts.
-
-· Good to have experience in Node.js, Typescript.
-
-· Good to have experience in AWS in a production environment and understand how to design for, deploy on and get the best out of, the environment and services provided by Amazon.
-
-· Security is at the forefront of your mind in everything that you do.
-
-4- 9 years of strong development skills in Core Java, Java 8, Microservices, Cloud along with Docker or Kubernetes
-Thorough understanding of OOPS, SOLID Design principles and implementation of different type of Design patterns.
-
- Core Java: CORE Java, OOPs, J2EE (Spring, Spring Boot) ,  Web services (REST), Ant/Maven,
-o    Code Quality: Unit Testing ( Junit 4/5 + Mockito), Code quality check Tools ( SonarQube, Sona type)
-o    Source code repository: VSTS, SVN, GIT, TFS etc.
-o    Application hosting servers: Tomcat/WAS/any other
-•    Cloud Technologies:
-•     Data Bases
-o    Strong understanding and working knowledge of any Relational (MS SQL Server, Aurora) and Non-Relational (MongoDB) databases
-•     Strong Knowledge on Microservice Development
 
 cloud watch , ec2 instances 
 https://www.javainuse.com/webseries/spring-security-jwt/chap7
 https://www.javainuse.com/webseries/spring-security-jwt/chap4
 https://www.bezkoder.com/spring-boot-refresh-token-jwt/
+
 
 Hi Kiran ,
 
@@ -274,13 +237,32 @@ Hcl 4 PM ,
 
 
 
+cloud watch , ec2 instances 
+https://www.javainuse.com/webseries/spring-security-jwt/chap7
+https://www.javainuse.com/webseries/spring-security-jwt/chap4
+https://www.bezkoder.com/spring-boot-refresh-token-jwt/
 
 
 
 
 
+Why do you want to work at GS? (mention the GS business principles)
+What makes you a good fit for the position?
+Why should I pick you instead of another candidate?
+What do you know about operations at GS?
+What is an asset that you'd bring to the team?
+Tell me about a time you made a process more efficient.
+If you had a client that was upset about a situation that was out of your control and they threatened to take their business elsewhere, what would you do?
+Do you have experience with Tableau?
+
+Any challenging project and task you done :- FusionCharts , approve travel Expense , smart sourcing logic.
 
 
+1 -4 interrelated ?
+
+24 hr1(1)+ 0(2)+0(3) +1.5(4)+ 8hr(5) + x(6) + +1(sunday)(9) +{buffer time from landmark side and dp side }(10) 
+
+6 point discuss
 
 
 
