@@ -1,17 +1,9 @@
 package com.bt.service;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
 import java.util.Vector;
 
-import com.bt.service.GivenBinaryTreePrintAllRootToLeafPaths.Node;
-
 public class PrintAllKSumPathsInBinaryTree {
-	/*A binary tree and a number k are given. Print every path in the tree with sum of the nodes in the path as k.
+	/* A binary tree and a number k are given. Print every path in the tree with sum of the nodes in the path as k.
 	A path can start from any node and end at any node, i.e. they need not be root node and leaf node; and negative numbers can also be there in the tree.*/
 	/*
 	 * Input : k = 5  
@@ -72,7 +64,10 @@ Output :
 		}
 		path.remove(new Integer(root.data));
 	}
+	
+	
 	public static void main(String[] args) {
+		
 		PrintAllKSumPathsInBinaryTree node=new PrintAllKSumPathsInBinaryTree();
 		node.root = new Node(1);
 	    node.root.left = new Node(3);

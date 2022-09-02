@@ -1,0 +1,23 @@
+https://4comprehension.com/busy-developers-guide-to-java-9-10-11-12-13-and-above/
+
+Java 11 (LTS)
+Java 11 was the first Long-Term-Support release and featured 17 JEPs.
+
+The most notable changes involved the addition of HTTPClient, Flight Recorder, experimental low-pause garbage collector(ZGC), and an experimental no-op garbage collector(Epsilon). Additionally, Java EE and CORBA modules got removed, and Nashorn deprecated.
+
+We also got a tiny addition to Optional API: isEmpty(), which is the opposite of isPresent().
+
+And a few interesting methods in String API:
+
+isBlank
+lines
+repeat
+strip
+stripLeading
+stripTrailing
+Release date: 25 September 2018
+
+
+
+postgre
+

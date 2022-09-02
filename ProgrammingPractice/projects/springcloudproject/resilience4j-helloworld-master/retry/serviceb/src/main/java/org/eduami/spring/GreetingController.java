@@ -11,6 +11,7 @@ import java.util.Random;
 @RestController
 public class GreetingController {
     Random random = new Random(-6732303926L);
+    
     @GetMapping("/serviceBgreeting")
     public ResponseEntity greeting(@RequestParam(value = "name", defaultValue = "serviceB") String name) {
         return generateErrorBehavior(name);

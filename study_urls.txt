@@ -1,8 +1,8 @@
-https://www.javatpoint.com/mockito  for any method use this -> https://www.baeldung.com/mockito-void-methods    
+https://www.javatpoint.com/mockito  for any method use this -> https://www.baeldung.com/mockito-void-methods
 Spring security - > https://www.tutorialspoint.com/spring_boot/spring_boot_oauth2_with_jwt.htm
 https://www.pixeltrice.com/how-do-oauth-2-0-works-understand-in-very-simple-words/    Oauthc2.0 how to work and openIdConnect
-https://www.youtube.com/watch?v=af_2f1rrZdw&feature=emb_rel_end    Vedio oauth 2.0 + jwt + spring boot  
-https://keyholesoftware.com/2020/06/30/quick-start-spring-security-5-oauth2-login/   spring 5.2.x  + Oauth 2.0 
+https://www.youtube.com/watch?v=af_2f1rrZdw&feature=emb_rel_end    Vedio oauth 2.0 + jwt + spring boot
+https://keyholesoftware.com/2020/06/30/quick-start-spring-security-5-oauth2-login/   spring 5.2.x  + Oauth 2.0
 
 https://www.geeksforgeeks.org/backtracking-to-find-all-subsets/
 https://www.hackerrank.com/challenges/fraudulent-activity-notifications/problem?h_l=interview&playlist_slugs%5B%5D%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D%5B%5D=sorting
@@ -11,8 +11,8 @@ https://www.hackerrank.com/challenges/minimum-swaps-2/problem
 https://www.mplay.run/mongodb-online-terminal  Mongodb practice terminal
 https://www.w3resource.com/mongodb-exercises/
 https://dzone.com/articles/microservices-design-principles    microservices
-https://www.hackerrank.com/Interview/interview-preparation-kit?h_r=internal-search        
-Merge two sorted linked lists  
+https://www.hackerrank.com/Interview/interview-preparation-kit?h_r=internal-search
+Merge two sorted linked lists
 Clone a linked list with next and random pointer | Set 1
 Flatten a multilevel linked list
 Flatten a binary tree into linked list | Set-3
@@ -26,7 +26,7 @@ Merge two sorted linked lists such that merged list is in reverse order
 Reverse alternate K nodes in a Singly Linked List
 Rearrange a linked list in to alternate first and last element
 Alternate sorting of Linked list
-Minimum number 
+Minimum number
 of swaps required to sort an array
 
 https://www.hackerrank.com/challenges/crush/problem
@@ -57,17 +57,17 @@ select department , sum(salary) from BV_TEST_INVOICE group by department
 select * from BV_TEST_INVOICE order by salary desc
 select salary from (select distinct rownum as rank  from BV_TEST_INVOICE where rank<=2 ORDER BY  salary asc ) where rownum <=1 order by salary asc;
 
-select min(salary) from (select salary from 
+select min(salary) from (select salary from
 (select distinct salary from BV_TEST_INVOICE order by salary desc) where rownum <=2 )
 ----feth three Max salaries --
-select salary from 
+select salary from
 (select distinct salary from BV_TEST_INVOICE order by salary desc) where rownum <=3 ;
 ----feth three Min salaries --
-select salary from 
+select salary from
 (select distinct salary from BV_TEST_INVOICE order by salary asc) where rownum <=3 ;
 --Write an SQL query to print the name of employees having the highest salary in each department.
-select * from BV_TEST_INVOICE 
-select  department , min(salary) ,count(*) from BV_TEST_INVOICE group by department having count(*) >=2  
+select * from BV_TEST_INVOICE
+select  department , min(salary) ,count(*) from BV_TEST_INVOICE group by department having count(*) >=2
 select * FROM BV_TEST_INVOICE
 WHERE rowid  in
 (SELECT MIN(rowid)
@@ -77,19 +77,19 @@ GROUP BY department);
 select * from BV_TEST_INVOICE
     where rowid  in
     (select max(rowid) from BV_TEST_INVOICE group by department);
-    
-SELECT distinct Salary from BV_TEST_INVOICE a 
-WHERE 3 >= (SELECT count(distinct Salary) 
+
+SELECT distinct Salary from BV_TEST_INVOICE a
+WHERE 3 >= (SELECT count(distinct Salary)
 from BV_TEST_INVOICE b WHERE a.Salary >= b.Salary) order by a.Salary desc;
 
-SELECT distinct Salary from BV_TEST_INVOICE a WHERE 3 >= (SELECT count(distinct Salary) 
+SELECT distinct Salary from BV_TEST_INVOICE a WHERE 3 >= (SELECT count(distinct Salary)
 from BV_TEST_INVOICE b WHERE a.Salary <= b.Salary) order by a.Salary desc;
 
 --Write an SQL query to fetch the list of employees with the same salary.
 select * from BV_TEST_INVOICE ;
-Select distinct W.EMPLOYEE_ID, W.FIRST_NAME, W.Salary 
-from BV_TEST_INVOICE W , BV_TEST_INVOICE W1 
-where W.Salary = W1.Salary 
+Select distinct W.EMPLOYEE_ID, W.FIRST_NAME, W.Salary
+from BV_TEST_INVOICE W , BV_TEST_INVOICE W1
+where W.Salary = W1.Salary
 and W.EMPLOYEE_ID != W1.EMPLOYEE_ID;
 
 ---Write an SQL query to determine the 5th highest salary without using TOP or limit method.
@@ -101,5 +101,15 @@ WHERE 2 = (
  WHERE W2.Salary >= W1.Salary
  );
  SELECT SYSDATE FROM DUAL;
- 
 
+
+Geeksforgeeks --
+
+https://practice.geeksforgeeks.org/explore?page=1&curated[]=1&sortBy=submissions&utm_source=gfg&utm_medium=gfg_header&utm_campaign=gfgpractice_header
+https://practice.geeksforgeeks.org/explore?page=2&difficulty[]=1&difficulty[]=2&sortBy=submissions&utm_source=gfg&utm_medium=gfg_header&utm_campaign=gfgpractice_header
+https://practice.geeksforgeeks.org/events/rec/interview-series
+
+English Grammer-----
+https://hinditoenglish.in/grammar/
+https://www.topprnation.in/english-grammar-in-hindi-english/
+https://www.spokenenglish.guru/tense-definition-rules-charts/.        exaples of tense

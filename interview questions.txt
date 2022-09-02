@@ -36,21 +36,55 @@ Do you have experience in WebSphere Portal Server?*
 
 Implementing JWT (JSON Web Tokens) with Spring Security in Springboot App
 What Is The Most Challenging Project You Have Worked On?
+
 https://www.interviewbit.com/puzzles/
 important questons ---
 spring boot embedded database  = embedded H2, HSQL and Derby databases. (in memory database)
-difference between Yaml and Properties file 
+difference between Yaml and Properties file (indentation)
 what is thymeleaf
 application.properties => spring.application.name , spring.config.name ,server.port ,
 Spring Boot Embedded Web Server  :  Tomcat , Jetty Server , Undertow Server
+
+How to change server in spring boot.{
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+    <exclusions>
+        <exclusion>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-jetty</artifactId>
+</dependency>
+}
+
+PATCH HTTP Request: Unlike PUT Request, PATCH does partial update e.g. Fields that need to be updated by the client, only that field is updated without modifying the other field.
+
+So in the previous example, we have to send only the name and email field in the request body.
+
+{
+"first_name":"Geeky",    // field that to be updated
+"email":"hello@geeky.com",     // field that to be updated
+}
+
+
 Maven what is ArtifactId  and groupId
-Mockito test framwork , Simple Single Sign-On with Spring Security OAuth2
+Non Idempotent HTTP methods Post
+
+Mockito test framwork , Simple Single Sign-On with Spring Security OAuth2{
+test private method and static using  ' Powermock '
+}
 JUnit4 test framwork
 Spring Security JWT  , oauth2
 ci cd pipeline jenkins
 devops ci/cd pipeline  https://devops.com/how-to-implement-an-effective-ci-cd-pipeline/
 Microservices 
-Docker  framwork  , Kubernate
+Docker  framwork ,Kubernate
+
 GIT Framwork 
 MongoDB         https://www.guru99.com/mongodb-tutorials.html  , 
 https://docs.mongodb.com/manual/core/databases-and-collections/
@@ -58,18 +92,76 @@ GIT -  https://git-scm.com/docs/gittutorial ,https://www.tutorialspoint.com/git/
 https://www.vogella.com/tutorials/Git/article.html
 
 Mockito Framwork - 
+----
 Core java important questions
-cross origin in spring .
+--
+cross origin in spring 
+---.
 Flutter developer amazon lamda  mongodb  S3  Git ", " Jenkins "
-what is use of jProfiler .
-what is swagger .
+what is use of jProfiler .{
+it is a tool used for performance testing --
+}
+what is swagger{
+	Api documentation
+}
 https://java2blog.com/java-collections-interview-questions/
+
 How to print even and odd numbers using threads in java
-List<Employee>  emp ;  find duplicate 
+
+List<Employee>  emp ;  find duplicate {
+findDuplicateInStream(Stream<T> stream)
+    {
+  
+        // Return the set of duplicate elements
+        return stream
+  
+            // Group the elements along
+            // with their frequency in a map
+            .collect(
+                Collectors.groupingBy(
+                    Function.identity(),
+                    Collectors.counting()))
+  
+            // Convert this map into a stream
+            .entrySet()
+            .stream()
+  
+            // Check if frequency > 1
+            // for duplicate elements
+            .filter(m -> m.getValue() > 1)
+  
+            // Find such elements
+            .map(Map.Entry::getKey)
+  
+            // And Collect them in a Set
+            .collect(Collectors.toSet());
+    }
+}
+
 string str="sgggfgdjdgf"  find duplicate ;
-Mock final class .
-mock static methods .
+Mock final class .(Mockito 2 now supports final )
+
+mock static methods 
+.
 test void method using mockito
+{
+MyList myList = mock(MyList.class);
+    doNothing().when(myList).add(isA(Integer.class), isA(String.class));
+doThrow().when(myList).add(isA(Integer.class), isNull());
+
+    myList.add(0, "");
+ 
+    verify(myList, times(1)).add(0, "");
+
+MyList myList = mock(MyList.class);
+    ArgumentCaptor<String> valueCapture = ArgumentCaptor.forClass(String.class);
+    doNothing().when(myList).add(any(Integer.class), valueCapture.capture());
+    myList.add(0, "captured");
+ 
+    assertEquals("captured", valueCapture.getValue());
+
+}
+------
 Spring Class A is singlton inside  class B that's prototype 
 Spring Class B is prototype inside  class A thats Singlton { all works as singlton use ApplicationContextAware}
 is spring bean thread safe .
@@ -98,7 +190,10 @@ Q. java 8  filter Employee based on age and salary
 
 Q. How will you handle situation when live application down and find Outoffmemory eror : first stop server and then check all process running and kil them all clean server like some logs and and other restart again .
 
-Q. what is connection pools ;
+Q. what is connection pools ;{
+	A JDBC connection pool is a group of reusable connections for a particular database. Because creating each new physical connection is time consuming, the server maintains a pool of available 		connections to increase performance. When an application requests a connection, it obtains one from the pool.
+}
+
 Q. what is threadProol  given situation (miceroservice Front   calling to A B C D  services parallaly)
 
 Q. String str = "aabbbcccddssaaddffvv"  find duplicates   and delete duplicates 
@@ -119,15 +214,6 @@ Where non static variables are stored in Java?
 
 Image result for where static variables are stored in java
 
-Non-Static variables and Non-Static methods are non-static components of a class. These are also called instance components of a class. Non-static components are stored inside the object memory. Each object will have their own copy of non-static components.
-
-
-
-The memory for local variables is allocated on the thread's stack, the memory for instance and class variables reside in the corresponding object's space, which is in the heap. Keep in mind, that variables only store references to objects. They do not store the object!
-
-
-
-where primitive varriables are stored : Only local primitive variables and references to object (i.e. variable declared in method) are stored in stack. Others are stored in heap
 
 What is hascode : hashCode() is used for bucketing in Hash implementations like HashMap, HashTable, HashSet, etc.
 The value received from hashCode() is used as the bucket number for storing elements of the set/map. This bucket number is the address of the element inside the set/map.
@@ -154,7 +240,7 @@ public class IncorrectFileNameException extends Exception {
     }
 }
 
-2) Custom Unchecked Exception
+2) Custom Unchecked Exception{
 In our same example, let's assume that we need a custom exception if the file name doesn't contain any extension.
 
 In this case, we'll need a custom unchecked exception similar to the previous one, as this error will only be detected during runtime.
@@ -166,6 +252,8 @@ public class IncorrectFileExtensionException
     public IncorrectFileExtensionException(String errorMessage, Throwable err) {
         super(errorMessage, err);
     }
+}
+
 }
 
 
@@ -217,55 +305,111 @@ https://www.javainuse.com/webseries/spring-security-jwt/chap7
 https://www.javainuse.com/webseries/spring-security-jwt/chap4
 https://www.bezkoder.com/spring-boot-refresh-token-jwt/
 
-
-Hi Kiran ,
-
-Please find below answers to your questions in the same sequence as above.
-
-1) working with different -2 technologies and project domains and yes , i would also like to be a team lead if found any opportunity.
-2) Seeking for the opportunity to work with new technologies and tools .
-3) In next Role i would like to be team lead with development for giving contribution in full life cycle of project developments
-
-Regards
-Rajeev pal 
-
-Rajeev on 4th October at 7.15 PM  KPIT 
-Iris 3 pm ,
-Hcl 4 PM ,
-11 AM  other company
-
-
-
-
 cloud watch , ec2 instances 
 https://www.javainuse.com/webseries/spring-security-jwt/chap7
 https://www.javainuse.com/webseries/spring-security-jwt/chap4
 https://www.bezkoder.com/spring-boot-refresh-token-jwt/
 
 
+How to implements thread pool
+how to implement producer consumer problem
+how to implement own ArrayList 
+contract in Hashmap when key as objects
+predicate
+consumer
+suppier
+exception rules in overriding
+exception heirchy
+cyclic varrier , latch
+collection foreach vs stream foreach
+Parallel Streams
+
+https://javahungry.blogspot.com/2015/02/how-concurrenthashmap-works-in-java-internal-implementation.html
+https://medium.com/slalom-build/optimistically-locking-your-spring-boot-web-services-187662eb8a91
 
 
 
-Why do you want to work at GS? (mention the GS business principles)
-What makes you a good fit for the position?
-Why should I pick you instead of another candidate?
-What do you know about operations at GS?
-What is an asset that you'd bring to the team?
-Tell me about a time you made a process more efficient.
-If you had a client that was upset about a situation that was out of your control and they threatened to take their business elsewhere, what would you do?
-Do you have experience with Tableau?
+top companies twitter , adoby , microsoft , confluent ,
+linkedin , endeed , salesforce , atlasian , Google , OCI , Paypal , VISA,
+Tower research capital
+Gravitation Research
+world quant,
+nike
+Intuit,
+Fidelity investment
+Wells fargo,
+Druva ,
+flipkart,
+Myntra,
+Udaan,
+Urban Company
+Curefit
+Razore pay
+paytm,
+Rupeek,
+Jupiter money,
+phone pay,
+Zeta,
+Clea Tax,
+JusPAy
 
-Any challenging project and task you done :- FusionCharts , approve travel Expense , smart sourcing logic.
+
+Zynga,
+MPL,
+Dream 11,
+Hotstar
+Flock
+
+Nurture.form
+Meesho
+Inmobi
+swiggy
+zamato
+Delhivery
+Rivigo
+ola 
+vogo
+dunzo
+wooqer
+Freshworks
 
 
-1 -4 interrelated ?
-
-24 hr1(1)+ 0(2)+0(3) +1.5(4)+ 8hr(5) + x(6) + +1(sunday)(9) +{buffer time from landmark side and dp side }(10) 
-
-6 point discuss
-
+3+ years of experience building and developing backend applications
+Experience and familiarity with frameworks and tools viz Sprint Boot,Spring MVC,Docker,IntelliJ
+Experience in Continuous Delivery and DevOps mindset
+Experience with GraphQL
 
 
+
+
+
+https://app.resumekraft.com/editor/personal-info/-MvaUE7Q5rsvmpAyC7U0
+
+tech.  cucumber for TDD
+
+Some of the tools which support TDD are: JUnit, TestNG, NUnit, etc. Some of the tools which support BDD are SpecFlow, Cucumber, MSpec, et
+
+Note: Please prepare on below concepts for tomorrow discussion.
+ 
+Java,Spring Boot,Micro Service,TDD ,BDD ,CI/CD,Agile,Kafka
+
+incryption / decryption / digital Signature / how security works 
+https://www.docusign.com/how-it-works/electronic-signature/digital-signature/digital-signature-faq
+https://www.cisa.gov/uscert/ncas/tips/ST04-018#:~:text=Digital%20signatures%20work%20by%20proving,using%20the%20sender's%20private%20key.
+
+JWT Spring Security , refresh token , Spring security ith jwt and oauth.
+socket programming
+TCP / UDP ..
+https://www.codeusingjava.com/jwt/jwt4
+
+Reactive programming --
+Experience with MySQL, NoSql (Cassandra, Redis, DynamoDB)
+
+Technology Stack for Cross-Platform Apps
+React Native
+React Native is a JavaScript framework built by Facebook, Inc. for developing mobile apps with native visualization for iOS, Android, WEB. The main feature of React Native is that it lets programmers use the same code to run both iOS and Android apps. The combo of the JavaScript library and React’s UI paradigm allows responsive applications to interact with native APIs and consequently keeps the development team productive. The framework offers new and radical tools for building robust applications with an intuitive user interface. This programming tool is considered to be the most efficient way to create cross-platform applications due to its wider acceptance and mature market presence.
+
+ Scala, Cassandra, Kafka, Postgres, Functional Programming, REST API, microservices architecture, JSON, Avro, CI/CD, AWS, Fargate, Terraform, Git, Data streaming, ElasticSearch, Redis, Event Sourcing, unit/functional testing, cats, cats-effect, tagless final, CQRS, event sourcing
 
 
 

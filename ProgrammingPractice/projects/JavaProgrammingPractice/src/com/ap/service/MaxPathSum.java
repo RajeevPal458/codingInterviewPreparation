@@ -6,6 +6,7 @@ public class MaxPathSum {
 
 	public static int[] findMaxSum(int A[], int n){
 		int dp[]=new int[n];
+		
 		for(int j=0;j<n;j++)
 			dp[j]=0;
 		for(int i=0;i<n;i++){

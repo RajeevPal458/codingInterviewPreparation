@@ -56,6 +56,7 @@ static int MAX=100;
 					if(!match(temp, ch)){
 						System.out.println("Mish Match Paranthesis Found!");
 						System.out.println(temp+" "+ch);
+						break;
 					}
 				}
 			}

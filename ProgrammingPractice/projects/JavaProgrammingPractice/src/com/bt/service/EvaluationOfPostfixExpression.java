@@ -51,12 +51,6 @@ public class EvaluationOfPostfixExpression {
 				a=pop();
 				push(calculate(ch));
 			}
-			int t=0;
-			while(t<=top){
-				System.out.print(stack[t]+",");
-				t=t+1;
-			}
-			System.out.println();
 		}
 		while(!isEmpty())
 		System.out.println(pop());

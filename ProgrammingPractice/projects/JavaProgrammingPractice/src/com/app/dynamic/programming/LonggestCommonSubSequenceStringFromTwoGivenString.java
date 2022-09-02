@@ -2,6 +2,12 @@ package com.app.dynamic.programming;
 
 import java.util.Arrays;
 
+/**
+ * Longest Common Subsequence | DP-4
+ * 
+ * @author rajeevkumar.pal
+ *
+ */
 public class LonggestCommonSubSequenceStringFromTwoGivenString {
 
 	public static void main(String[] args) {

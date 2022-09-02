@@ -63,17 +63,7 @@ public class LongestIncreasingSubsequence {
 		System.out.println(sb.toString());
 		
 	}
-	public static void main(String[] args) {
-		int[] arr={3,4,-1,5,8,2,3,12,7,9,10};
-		int[] arr2={3,4,-1,5,8,2,3,12,7,9,10};
-		
-		Arrays.sort(arr2);
-		lcsubSequence(arr,arr2,arr.length,arr2.length);
-		System.out.println();
-		System.out.println();
-		lis(arr,arr.length);
-		System.out.println(LongestIncreasingSubsequenceLength(arr, arr.length));
-	}
+	
 	static int CeilIndex(int temp[], int l, int r, int key)
     {
         while(l<=r){
@@ -145,4 +135,15 @@ public class LongestIncreasingSubsequence {
 		System.out.println("length of sub sequence:"+(end+1));
 	}
 	
+	public static void main(String[] args) {
+		int[] arr={3,4,-1,5,8,2,3,12,7,9,10};
+		int[] arr2={3,4,-1,5,8,2,3,12,7,9,10};
+		
+		Arrays.sort(arr2);
+		lcsubSequence(arr,arr2,arr.length,arr2.length);
+		System.out.println();
+		System.out.println();
+		lis(arr,arr.length);
+		System.out.println(LongestIncreasingSubsequenceLength(arr, arr.length));
+	}
 }

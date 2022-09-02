@@ -39,11 +39,12 @@ public class ConversionDecimalToOtherBaseNumber{
 		
 		if(num<base)
 			return num+"";
-		String result=null;
+		String result="";
 		int rem=num%base;
 		String str=decimalToAnyBase(num/base, base);
 			result=str+((rem>=10)? (char)(rem-10+'A')+"":rem);
 		return result;
+		
 	}
 	public static void main(String[] args) {
 		System.out.println(decimalToAnyBase(28,2));

@@ -58,6 +58,9 @@ public class MaximumSumRectangleInA2DMatrixDP {
 		             finalTop = t.top;
 		             finalBottom = d.down;
 				}
+				
+				System.out.println("finalLeft:"+finalLeft+": finalRight :"+finalRight+": finalTop :"+finalTop+":finalBottom:"+finalBottom);
+				System.out.println();
 			}
 		}
 		

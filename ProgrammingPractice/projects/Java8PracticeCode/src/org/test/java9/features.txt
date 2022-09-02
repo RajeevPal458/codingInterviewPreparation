@@ -1,0 +1,39 @@
+
+https://www.youtube.com/watch?v=K8Jc_EaBVMI&list=PLBKgXPzyseMzncjNy10-uB0yC5kcZ_v9Q 
+durga Sir 
+Java 9 features (2017)
+1) REPL => Read , Eval , Print ,loop 
+     JShell => use 
+ home/rajeev> jshell  (Enter)
+ jshell> System.out.println("Hello world")   => test any thing directly no need to create class and main method
+ {
+ 	/list
+ 	/edit
+ 	/help
+ 	/import
+ 	/set feedback
+ 	/history
+ 	/vars
+ 	> 4+8 ($1 =12)
+ 	/types
+ 	
+ }
+2) Collection Factory Method to create unmodifiable collection
+	List<String> list = List.of("apple","banana","orange")  use to create immutable List
+	Set.of();
+	Map.of();
+
+3) HTTP/2  client
+3) JPMS(java plateform module system) Jigsaw project -> java moduler programming 
+
+4) Enhancedment in stream API
+  you can define private method in interfaces that is used by default method code reusebility
+  
+5) JLink ( java Linker)
+
+6) Process Api updates
+7) try with resource enhancements
+8) Stream api enhancement
+9) <> operator enhancements
+10)safe varargs annotation
+11) G1 GC  become default 

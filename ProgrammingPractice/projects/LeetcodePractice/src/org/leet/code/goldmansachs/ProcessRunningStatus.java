@@ -33,7 +33,7 @@ public class ProcessRunningStatus {
         	String procc =parr[1];
         	String status =parr[2];
         }
-        
+        return result;
     }
 
 }

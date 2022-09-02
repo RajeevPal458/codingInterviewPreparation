@@ -13,7 +13,7 @@ public class CountAllSubArrHavSumDivByk {
 	    int arr1[] = {4, 5, 0, -12, -23, 1};
 	    int k1 = 5;
 	    int n1 = arr1.length;
-	    //System.out.println(subCount(arr1, n1, k1));
+	    System.out.println(subCount(arr1, n1, k1));
 	}
 
 	private static int subCount(int[] arr, int n, int k) {

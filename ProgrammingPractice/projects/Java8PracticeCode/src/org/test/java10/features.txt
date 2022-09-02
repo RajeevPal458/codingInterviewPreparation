@@ -1,0 +1,25 @@
+https://4comprehension.com/busy-developers-guide-to-java-9-10-11-12-13-and-above/
+
+java 10 Features -----
+
+1) local varriable type inference dynamic typed var used for only local varriable
+ {
+
+	var name = "rajeev" ;  no need to give type here it identified autometically
+	
+	var type can't use in method param and in return type
+}
+
+2) Optional class 'orElseThrow'  method
+3) List.copyOf() ,Set.copyOf() ,Map.copyOf() methods create new Collection instances from existing instances
+4) new methods toUnmodifiableList() , toUnmodifiableSet() ,toUnmodifiableMap() added to Collectors class in the stream package
+
+The most notable changes involved an introduction of local-variable-type-inference(var), Garbage Collector interface, G1 improvements (parallel full GC), and application class-data sharing.
+
+Among other stuff, we received new handy Collectors to be used with unmodifiable collections:
+
+Collectors.toUnmodifiableList()
+Collectors.toUnmodifiableSet()
+Collectors.toUnmodifiableMap()
+
+Release date: 20 March 2018

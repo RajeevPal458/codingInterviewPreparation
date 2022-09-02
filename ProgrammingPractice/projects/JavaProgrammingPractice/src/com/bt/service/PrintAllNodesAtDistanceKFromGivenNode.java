@@ -1,7 +1,5 @@
 package com.bt.service;
 
-import com.bt.service.PrintAllKSumPathsInBinaryTree.Node;
-
 public class PrintAllNodesAtDistanceKFromGivenNode {
 /*
  * Given a binary tree, a target node in the binary tree, and an integer value k, print all the nodes that are at distance k from the given target node. No parent pointers are available.
@@ -33,11 +31,60 @@ should be "4 20"
 	        left = right = null;
 	    }
 	}
-	private static void printkdistanceNode(Node root2, Node target, int i) {
+	
+	private static int printkdistanceNode(Node root, Node target, int k) {
+		
+		if(root ==null) return -1;
+		
+		if(root.data == target.data) {
+			printDown(root,k);
+			return 0;
+		}
+		
+		int num =printkdistanceNode(root.left, target, k);
+		if(num != -1) {
+			//target found in left
+			if((num+1)==k)
+				System.out.println(root.data);
+			else 
+				printDown(root.right,k-num-2);
+			
+			return num+1;
+		}
+			// target not found in left
+			int num2 =printkdistanceNode(root.right, target, k);
+			
+			if(num2 !=0) {
+				//target found in left
+				if((num2+1)==k)
+					System.out.println(root.data);
+				else
+					printDownLeft(root.left,k-num2-2);
+				
+				return num2+1;
+			}
+		return -1;
 		
 	}
+	private static void printDown(Node root, int k) {
+		// TODO Auto-generated method stub
+		if(root==null || k<0) return ;
+		if(k==0) System.out.println(root.data);
+		
+		printDown(root.left, k-1);
+		printDown(root.right, k-1);
+	}
+	private static void printDownLeft(Node root, int k) {
+		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub
+		if(root==null || k<0) return ;
+				if(k==0) System.out.println(root.data);
+				
+				printDownLeft(root.left, k-1);
+				printDownLeft(root.right, k-1);
+	}
 	public static void main(String[] args) {
-		PrintAllNodesAtDistanceKFromGivenNode node=new PrintAllNodesAtDistanceKFromGivenNode();
+		PrintAllNodesAtDistanceKFromGivenNode node = new PrintAllNodesAtDistanceKFromGivenNode();
 		
 		node.root = new Node(20);
 		node.root.left = new Node(8);
@@ -47,6 +94,7 @@ should be "4 20"
 		node.root.left.right.left = new Node(10);
 		node.root.left.right.right = new Node(14);
 	    Node target = node.root.left.right;
-	    printkdistanceNode(node.root, target, 2);
+	    int k=2;
+	    printkdistanceNode(node.root, target, k);
 	}
 }
