@@ -414,3 +414,150 @@ React Native is a JavaScript framework built by Facebook, Inc. for developing mo
 
 
 
+SPRING Modules
+=====================
+	@configuration
+	@Controller
+	Acutators/ Histrix/ Turbine etc…
+	@qualifier
+	@autoenable configuration
+	Autowiring & how to avoid autowiring conflicts?
+	Spring Boot --@Component
+	Spring boot depenecy management
+	Spring Annotaions
+	How @component works internally?
+	Wat features of spring data you have used?
+	Can I change the annotations of service repository in component?
+	Spring Cloud Config.- (Netflix OSS, Eureka & Zuul Gateway)
+
+REST API
+====================================
+	Best practices you follow while using Rest
+	Get,Put,Post,Delete method
+	Versioning? Why & When do we use?
+	Pagination? Why & When do we use?
+	Hateos?
+	How do you handle Exceptions in rest? 
+	Idempotent VS non idempotent methods In rest?
+	Diff b/w Put & Patch?
+	Resource Grouping?
+	Code Generation & Mocking?
+	Write API with Contract 1st Approach with Open API Spec. (Swagger)
+	Coarse vs Fine Grain API
+
+Application Security
+API Security Basic Auth, Client Credential, JWT usage, JJWT lib
+Authcode Flow, Open IDC, IAM integration, key cloak
+=====================================
+	*Is ware of basic Authentication and API key verification
+* Has consumed JWT token and is aware of token validation
+*Auth2.0 using client ID and client secret at minimum  
+*Aware of OAUTH grant types(Client credential, password, implicit, Authcode)
+
+
+Micro Services
+======================================
+Orchestration, Choreogrpahy, SAGA Pattern with Usecase
+	*Understanding of Orchestration & choreography scenarios through user Journey
+	*Command Pattern & Eventual Consistency
+	Difference between orchestration & Choreography
+
+Bounded Context, Domain model, Transactions with Usecase
+Bounded context,Services decomposition, distributed service commn
+
+
+CQRS and Event sourcing with Usecase
+Caching in MS, CQRS in API strategy and DB strategy, 
+
+
+API Gateway
+API Gateway policy Implemenmtation security , traffic, Devportal 
+
+
+
+1)	What is your exp in MS?
+
+2)	Explain MS Architecture? Pros & cons of MS? 
+
+3)	Challenges while migrating from Monolithic to MS?
+
+4)	Wat all key factors you consider wen u design rest API for a given application?
+
+5)	Ntelix OSS stack (Erureka, Zuul)
+
+6)	Wat is service discovery? Wat are client Side & server side discovery?
+
+7)	Any experience in Security?
+
+8)	Can u brief wat is SAGA pattern? Why do we use SAGA?
+
+9)	Wat are orchestrator & choreographer patterns in SAGA?
+
+10)	Wat is API composer, circuit breaker, Service discovery, Service registry, API gateway pattern?
+
+11)	Any exp with Event driven or domain driven?
+
+12)	Wat are the different things you do to minimize the risk while migrating from monolithic to MS?
+
+13)	How you actually take care of multiple transactions?
+
+14)	Which interface you have used for Inter communication of MS ? like rest template or Finclinet?
+
+15)	While creating rest what are the problems you encounter While connecting with MS?
+
+16)	Wat is chain of responsibility pattern in MS?
+
+
+17)	Wat kind of output we get in rest? Like XML, HTML etc…
+
+18)	XML & HTML are same or different? If yes, then How?
+
+19)	Wat are the components in HTTP requests?
+
+20)	How will you breakup response?
+
+21)	Wat are the components of Rest response?
+
+22)	Wat is the URI. URL format u create in rest API? What is the standard recommended practice?
+
+23)	Wat is Pagination? When & how does it work?
+
+24)	Wat is Versioning? When & how does it work?
+
+25)	Wat interface u use for Inter-communication of MS? Like rest template & fin client
+
+26)	Any caching exp? Which cache? Wen & wer to use cache?
+
+27)	Key thing su keep in mind whether the data to be cached or not?
+
+28)	API security? Wat do you understand?
+
+29)	How will you secure you API’s?
+
+30)	How will you implement SSO/ OAuth2.0 ?
+
+31)	Wen & wer to SSO (Single Sign on)?
+
+32)	How will you identify whether use has SSO access or not?
+
+33)	Any cloud exp? Which cloud?
+
+34)	1 or 2 cloud based questions?
+
+35)	Have you been involved in production Deployment? If yes then wen and wat is the checklist u follow?
+
+36)	Wat are you roles & responsibilities during your implementation.
+
+37)	If you have 1000 requests, wat approach you will take to resposnd to all 1000?
+
+38)	Deff b/w put & patch? Use case wer u will use put & Patch?
+
+39)	How u integrate swagger with you Rest API?
+
+40)	Di you use any services of cloud so far?
+
+41)	How r u validating logs through AWS?
+
+
+
+
