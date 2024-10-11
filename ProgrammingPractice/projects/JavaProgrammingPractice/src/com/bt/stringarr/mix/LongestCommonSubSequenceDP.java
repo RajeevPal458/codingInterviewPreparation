@@ -76,11 +76,27 @@ public class LongestCommonSubSequenceDP {
 		System.out.println(sb.toString());
 		
 	}
+	
+	public static int lcss(String str1,String str2,int m,int n) {
+		if(m==0 || n==0) return 0;
+		
+		if(str1.charAt(m-1)==str2.charAt(n-1)) {
+			return 1+ lcss(str1, str2, m-1, n-1);
+		}
+		
+		return Math.max(lcss(str1, str2, m-1, n), lcss(str1, str2, m, n-1));
+		
+	}
+	
+	
+	
 	public static void main(String[] args) {
 		String str1="DCBEA";
 		String str2="ADCA";
 		lcsubSequence(str2.toCharArray(),str1.toCharArray(),str2.length(),str1.length());
 		
+		int len = lcss(str1, str2, str1.length(), str2.length());
+		System.out.println("LCSS:-"+len);
 	}
 	
 }

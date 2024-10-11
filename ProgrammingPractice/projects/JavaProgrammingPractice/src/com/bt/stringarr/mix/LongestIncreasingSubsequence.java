@@ -1,5 +1,6 @@
 package com.bt.stringarr.mix;
 import java.util.Arrays;
+import java.util.List;
 
 public class LongestIncreasingSubsequence {
 	static int[][] dp;
@@ -135,8 +136,49 @@ public class LongestIncreasingSubsequence {
 		System.out.println("length of sub sequence:"+(end+1));
 	}
 	
+	
+	 public static int getCeilingValue(int[] temp,List<Integer> arr,int len,int num){
+	        int start =0;
+	        int end =len;
+	        
+	        while(start<=end){
+	            int mid =(start+end)/2;
+	            
+	            if(num==arr.get(temp[mid])){
+	                return mid;
+	            }
+	            if (num < arr.get(temp[mid])) {
+	                end = mid - 1;
+	            }
+	 
+	            else {
+	                start = mid + 1;
+	            }
+	        }
+	        return start;
+	    }
+	  
+	    public static int longestIncreasingSubsequence(List<Integer> arr) {
+	        int n =arr.size();
+	        int[] temp = new int[n];
+	        int len=0;
+	        temp[len] =0;
+	        
+	        for(int i=1;i<n;i++){
+	            if(arr.get(i) > arr.get(temp[len])){
+	                temp[++len]=i;
+	            }else{
+	                int index =getCeilingValue(temp,arr,len,arr.get(i));
+	                temp[index] =i;
+	            }
+	            
+	        }
+	        return len+1;
+	    }
+
+	
 	public static void main(String[] args) {
-		int[] arr={3,4,-1,5,8,2,3,12,7,9,10};
+		int[] arr={5,2,7,4,3,8};
 		int[] arr2={3,4,-1,5,8,2,3,12,7,9,10};
 		
 		Arrays.sort(arr2);
@@ -145,5 +187,12 @@ public class LongestIncreasingSubsequence {
 		System.out.println();
 		lis(arr,arr.length);
 		System.out.println(LongestIncreasingSubsequenceLength(arr, arr.length));
+		
+		List<Integer> list = Arrays.stream(arr).boxed().toList();
+		
+		int size =longestIncreasingSubsequence(list);
+		System.out.println("size:-"+size);
+		
+		
 	}
 }

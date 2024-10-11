@@ -19,10 +19,31 @@ public class LongestPelindromicSubsequence {
 		}
 		return dp[0][n-1];
 	}
+	
+	
+	public static int lps_recursive(String str,int i,int j,int n) {
+		if(i==j) return 1;
+		
+		if(str.charAt(i)==str.charAt(j) && i+1==j) return 2;
+		
+		if(str.charAt(i)==str.charAt(j)){
+			return 2+ lps_recursive(str, i+1, j-1, n);
+		}
+		
+		return Math.max(lps_recursive(str, i+1, j, n), lps_recursive(str, i, j-1, n));
+		
+	}
+	
+	
 	public static void main(String[] args) {
 		String str="lpaspal";
+		
 		LongestPelindromicSubsequence lps=new LongestPelindromicSubsequence();
+		
 		System.out.println("Longest Pelindromic sub sequence length:"+lps.lps(str.toCharArray(),str.length()));;
+		
+		
+		System.out.println("Longest Pelindromic sub sequence length:"+lps_recursive(str,0,str.length()-1,str.length()));;
 		
 	}
 }

@@ -7,9 +7,9 @@ public class MinimumEditDistance {
 		int[][] dp=new int[m2+1][m1+1];
 		dp[0][0]=0;
 		for(int i=1;i<=m1;i++)
-			dp[0][i]=dp[0][i-1]+1;
+			dp[0][i]=i;
 		for(int i=1;i<=m2;i++)
-			dp[i][0]=dp[i-1][0]+1;
+			dp[i][0]=i;
 		
 		for(int i=1;i<=m2;i++)
 		{

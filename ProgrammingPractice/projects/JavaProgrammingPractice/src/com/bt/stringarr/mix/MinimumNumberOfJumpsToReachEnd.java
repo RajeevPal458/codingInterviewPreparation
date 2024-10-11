@@ -60,9 +60,20 @@ public class MinimumNumberOfJumpsToReachEnd {
 		System.out.println();
 	}
 	
+	//Recursive approch
+	public static  int minJumps_Recursive(int arr[], int jumps,int curr, int n){
+	    if(curr>=n-1) return jumps;
+	    
+	    int min=Integer.MAX_VALUE;
+	    for(int i=arr[curr];i>0;i--) {
+	    	min = Math.min(min, minJumps_Recursive(arr, jumps+1, curr+i, n));
+	    }
+	    
+	    return min;
+	}
+		
 	//Dynamic approch
-	/*
-	 *public static  int minJumps(int arr[], int n){
+	public static  int minJumps(int arr[], int n){
     		int[] jumps = new int[n];  // jumps[n-1] will hold the result
     		int i, j;
  
@@ -73,10 +84,10 @@ public class MinimumNumberOfJumpsToReachEnd {
     		// from arr[0], and assign this value to jumps[i]
     		for (i = 1; i < n; i++)
     		{
-        		jumps[i] = 999999;
+        		jumps[i] = Integer.MAX_VALUE;
         		for (j = 0; j < i; j++)
         		{
-            		if (i <= j + arr[j] && jumps[j] != INT_MAX)
+            		if (i <= j + arr[j] && jumps[j] != Integer.MAX_VALUE)
             		{
                  		jumps[i] = Math.min(jumps[i], jumps[j] + 1);
                  		break;
@@ -84,8 +95,8 @@ public class MinimumNumberOfJumpsToReachEnd {
         		}
     		}
     		return jumps[n-1];
-		}
-	 * */
+	}
+	 
 	public static void main(String[] args) {
 		int arr[] = {1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9};
 		int n=arr.length;
@@ -95,6 +106,14 @@ public class MinimumNumberOfJumpsToReachEnd {
 		mjp.printJumps(mjp.jumpPos,mjp.jumpIndex);
 		System.out.println("Minimum jumps:"+(mjp.jumpIndex-1));
 		
+		System.out.println();
+		int jumps = minJumps(arr, n);
+		System.out.println("Jumps:-"+jumps);
+
 		
+		System.out.println();
+		int jumps_rec = minJumps_Recursive(arr,0,0, n);
+		System.out.println("jumps_rec:-"+jumps_rec);
+	
 	}
 }

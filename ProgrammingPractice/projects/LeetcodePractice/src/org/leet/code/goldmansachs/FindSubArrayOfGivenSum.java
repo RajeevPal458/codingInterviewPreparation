@@ -26,7 +26,6 @@ public class FindSubArrayOfGivenSum {
 			
 			if(currSum==sum) {
 				System.out.println("Ans : sub array > ("+j+","+i+") , sum :"+currSum);
-				continue;
 			}
 			
 			//System.out.println(":j:"+j+":i:"+i+":currSum:"+currSum);

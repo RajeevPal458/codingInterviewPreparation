@@ -22,12 +22,39 @@ public class LongestCommonSubString {
 			}
 		}
 	}
+
+	public static int lcss(String str1,String str2,int m,int n) {
+		if(m==0 || n==0 || str1.charAt(m-1)!=str2.charAt(n-1)) return 0;
+		
+		
+		return 1+ lcss(str1, str2, m-1, n-1);
+		
+	}
+	
+	static int maxCommStr(String s1, String s2) {
+        int res = 0;
+        int m = s1.length();
+        int n = s2.length();
+
+        // Find the longest common substring ending
+        // at every pair of characters and take the 
+        // maximum of all.
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
+                res = Math.max(res, lcss(s1, s2, i, j));
+            }
+        }
+        return res;
+    }
+	
 	public static void main(String[] args) {
 		String str1="LCLC";
-		String str2="CLCL";
+		String str2="CLACL";
 		lcsubSequence(str1.toCharArray(),str2.toCharArray(),str1.length(),str2.length());
 		System.out.println(str2.substring(end-max+1, end+1)+"  " +max);
 		
+		int len = maxCommStr(str1, str2);
+		System.out.println("LCSS:-"+len);
 		
 	}
 
