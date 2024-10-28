@@ -5,10 +5,13 @@ import java.util.Map;
 
 public class LruCache1<T,R> extends LinkedHashMap<Integer, String>{
 
+	
+	
 	private static final long serialVersionUID = 1L;
 	private final int capacity;
 	LruCache1(int capacity){
 		super(capacity, 0.75f, true); 
+		
 		this.capacity=capacity;
 	}
 	

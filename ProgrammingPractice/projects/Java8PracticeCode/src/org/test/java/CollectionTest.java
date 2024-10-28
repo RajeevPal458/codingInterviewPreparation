@@ -16,7 +16,9 @@ import java.util.stream.Collectors;
 public class CollectionTest {
 
 	public static void main(String[] args) {
-		
+		float n=23f;
+		float num=0/0;
+		System.out.println(num);
 	    Map<String, String> map= new HashMap<>();
 		
 		map.put("rajeev", "pal");
