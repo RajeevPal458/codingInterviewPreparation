@@ -156,9 +156,12 @@ public class Java8Features {
                 .comparing(Employee::getName,Comparator.reverseOrder()
                 		)
                 .thenComparing(Employee::getAge);
+	// employees.sort(Comparator.comparing(Employee::getName)
+    //    .thenComparing(Comparator.comparing(Employee::getSalary).reversed()));
 	
-	
-	
+//	SELECT *
+//		FROM Employee
+//		ORDER BY name ASC, salary DESC;
 		testMain2();
 	}
 	

@@ -1,0 +1,47 @@
+{
+	"folders": [
+		{
+			"path": "../../React/learningprojects/my-app"
+		},
+		{
+			"path": "../../Angular/learningProjects/angular-forms"
+		},
+		{
+			"path": "../../Angular/learningProjects/angular-pipe"
+		},
+		{
+			"path": "../../Angular/learningProjects/angular-signals"
+		},
+		{
+			"path": "../../Angular/learningProjects/angular-webpack"
+		},
+		{
+			"path": "../../Angular/learningProjects/bootstrap-ui-forms"
+		},
+		{
+			"path": "../../Angular/learningProjects/data-bindings"
+		},
+		{
+			"path": "../../Angular/learningProjects/http-api-call"
+		},
+		{
+			"path": "../../Angular/learningProjects/input-output-decorator"
+		},
+		{
+			"path": "../../Angular/learningProjects/material-ui-forms"
+		},
+		{
+			"path": "../../Angular/learningProjects/node_modules"
+		},
+		{
+			"path": "../../Angular/learningProjects/prod-ready"
+		},
+		{
+			"path": "../../Angular/learningProjects/routing-app"
+		},
+		{
+			"path": "../../Angular/learningProjects/service-injection"
+		}
+	],
+	"settings": {}
+}

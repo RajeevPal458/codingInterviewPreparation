@@ -1,0 +1,21 @@
+.registrationForm{
+    width: 545px;
+    height: 395px;
+    background-color: antiquewhite;
+    align-content: center;
+}
+.formHeading{
+    background-color: brown;
+    font-weight: bolder;
+    text-align: center;
+}
+.topFormDiv{
+    width: 550px;
+    height: 450px;
+    border: 2px solid blue;
+    align-content: center;
+    text-align: center;
+    display: block;
+    margin-left: 400px;
+    margin-top: 100px;
+}

@@ -1,0 +1,10 @@
+<p>parent works!</p>
+
+<h1> Parent Component</h1>
+{{createdDate | date:"fullDate" | uppercase}}
+<app-child [createdfullDate]="createdDate" (nameUpdateEvent)="receiveData($event)"></app-child>
+
+<br/>
+<button (click)="updateDate()">updateDate</button>
+<br/>
+Name From Child:{{nameFromChild | uppercase}}

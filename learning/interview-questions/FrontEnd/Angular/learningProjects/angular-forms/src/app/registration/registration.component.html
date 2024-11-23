@@ -1,0 +1,48 @@
+<div class="topFormDiv">
+
+    <div class="formHeading"><h2>Registration Form</h2></div>
+    <div class="registrationForm">
+        <form [formGroup]="registrationForm" (ngSubmit)="formSubmit(registrationForm)">
+            <div>
+                <div><label for="firstName">First Name</label></div>
+                <input type="text" id="firstName" placeholder="Enter First Name" formControlName="firstName">
+                <div *ngIf="registrationForm.controls['firstName'].touched && !registrationForm.controls['firstName'].valid">
+                    First name sould not be empty
+                </div>
+            </div>
+            <div>
+                <div><label for="lastName">First Name</label></div>
+                <input type="text" id="lastName" placeholder="Enter Last Name" formControlName="lastName">
+                <div *ngIf="registrationForm.controls['lastName'].touched && !registrationForm.controls['lastName'].valid">
+                    <span *ngIf="registrationForm.controls['lastName'].hasError('required')">
+                        Last name sould not be empty
+                    </span>
+                    <span *ngIf="registrationForm.controls['lastName'].hasError('minLength')">
+                        Last name sould have at least 4 char
+                    </span>
+                    <span *ngIf="registrationForm.controls['lastName'].hasError('maxLength')">
+                        Last name sould not have more then 15 char
+                    </span>
+                   
+                </div>
+            </div>
+            <div>
+                <div><label for="email">Email</label></div>
+                <input type="text" id="email" placeholder="enter your email" formControlName="email">
+                <div *ngIf="registrationForm.controls['email'].touched && !registrationForm.controls['email'].valid">
+                    email sould not be empty
+                </div>
+            </div>
+            <div>
+                <div><label for="mobileNumber">Mobile Number</label></div>
+                <input type="text" id="mobileNumber" placeholder="enter your mobile number" formControlName="mobileNumber">
+                <div *ngIf="registrationForm.controls['mobileNumber'].touched && !registrationForm.controls['mobileNumber'].valid">
+                    Mobile sould not be empty
+                </div>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
