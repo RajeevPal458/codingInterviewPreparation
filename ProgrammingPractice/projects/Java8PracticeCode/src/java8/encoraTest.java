@@ -1,5 +1,6 @@
 package java8;
 
+import java.util.Arrays;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -10,8 +11,11 @@ public class encoraTest {
 	
 	public static void main(String[] args) {
 		String str ="Swiss Cheese !";
+		
 		uniqueChars();
 		nonRepeatingUnique();
+		
+		CharArrayToStream();
 	}
 	
 	
@@ -64,6 +68,10 @@ public class encoraTest {
 		     .mapToObj(i -> arr[i]);
 
 		 characterStream1.forEach(System.out::println);  // Output: a b c d
+		 
+		 
+		 String[] strarr = {"sada","aaaa","bbb"};
+		 Arrays.stream(strarr).forEach(s->System.out.println(s));
 		 
 		 
 	}
