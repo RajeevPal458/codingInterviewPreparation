@@ -1,0 +1,43 @@
+{
+	"folders": [
+		{
+			"path": "angular-forms"
+		},
+		{
+			"path": "angular-pipe"
+		},
+		{
+			"path": "angular-signals"
+		},
+		{
+			"path": "angular-webpack"
+		},
+		{
+			"path": "bootstrap-ui-forms"
+		},
+		{
+			"path": "data-bindings"
+		},
+		{
+			"path": "http-api-call"
+		},
+		{
+			"path": "input-output-decorator"
+		},
+		{
+			"path": "material-ui-forms"
+		},
+		{
+			"path": "node_modules"
+		},
+		{
+			"path": "prod-ready"
+		},
+		{
+			"path": "routing-app"
+		},
+		{
+			"path": "service-injection"
+		}
+	]
+}
