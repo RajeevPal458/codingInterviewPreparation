@@ -2,9 +2,11 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import (
     StandardScaler, MinMaxScaler, RobustScaler,
-    OneHotEncoder, LabelEncoder, OrdinalEncoder,
+    OneHotEncoder, LabelEncoder, OrdinalEncoder,TargetEncoder,
     Binarizer, Normalizer, PolynomialFeatures
 )
+#BinaryEncoder,DecisionTreeRegressor,ExtraTreesRegressor
+from sklearn.linear_model import (BayesianRidge,LinearRegression,LogisticRegression)
 from sklearn.experimental import enable_iterative_imputer  # Enable IterativeImputer
 from sklearn.impute import (
     SimpleImputer, KNNImputer, IterativeImputer, MissingIndicator
