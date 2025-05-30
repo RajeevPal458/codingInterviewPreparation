@@ -52,9 +52,11 @@ import sklearn.linear_model as linear_model
 import sklearn.tree as tree
 import sklearn.ensemble as ensemble
 import sklearn.svm as svm
-from sklearn.feature_selection import (
-        SelectKBest, SelectPercentile, RFE, RFECV,f_classif,f_regression,f_oneway,VarianceThreshold
-)
+
+# list all feature selection techniques from sklearn library
+import sklearn.feature_selection as feature_selection
+
+
 import sklearn.feature_extraction.text as text
 import sklearn.feature_extraction.image as image_extraction
 import sklearn.decomposition as decomposition
@@ -62,6 +64,25 @@ import sklearn.metrics.pairwise as pairwise_metrics
 import sklearn.neighbors as neighbors
 import sklearn.naive_bayes as naive_bayes
 import sklearn.cluster as cluster
+
+
+feature_selection.chi2
+# feature_selection.f_classif
+# feature_selection.f_regression
+# feature_selection.mutual_info_classif
+# feature_selection.mutual_info_regression
+# feature_selection.SelectKBest
+# feature_selection.SelectPercentile
+# feature_selection.RFE
+# feature_selection.RFECV
+# feature_selection.VarianceThreshold
+# feature_selection.SelectFromModel
+# feature_selection.GenericUnivariateSelect
+# feature_selection.SequentialFeatureSelector
+# feature_selection.SelectFdr
+# feature_selection.SelectFpr
+# feature_selection.SelectFwe
+feature_selection.SelectKBest
 
 
 
