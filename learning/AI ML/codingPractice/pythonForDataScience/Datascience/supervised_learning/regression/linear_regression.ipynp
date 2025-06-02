@@ -1,0 +1,48 @@
+# 📌 Step 1: Import Libraries
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import fetch_california_housing
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import make_pipeline
+
+# 📌 Step 2: Load California Housing Dataset
+data = fetch_california_housing()
+X = data.data     # Features
+y = data.target   # Target: Median house value
+
+# Let's use only 1 feature for visualization: 'AveRooms' (index 3)
+X = X[:, [3]]  # Average number of rooms per household
+
+# 📌 Step 3: Train/Test Split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# 📌 Step 4: Define and Train Linear Regression Model
+model = make_pipeline(
+    StandardScaler(),                # Normalize input features
+    LinearRegression()
+)
+model.fit(X_train, y_train)
+
+# 📌 Step 5: Predict on Test Data
+y_pred = model.predict(X_test)
+
+# 📌 Step 6: Evaluate Model
+mse = mean_squared_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+
+print("✅ Mean Squared Error (MSE):", mse)
+print("✅ R^2 Score:", r2)
+
+# 📌 Step 7: Visualize Results
+plt.figure(figsize=(10,6))
+plt.scatter(X_test, y_test, color='blue', label='Actual', alpha=0.5)
+plt.plot(X_test, y_pred, color='red', label='Predicted Line', linewidth=2)
+plt.xlabel('Average Rooms per Household')
+plt.ylabel('Median House Value')
+plt.title('Linear Regression - California Housing')
+plt.legend()
+plt.grid(True)
+plt.show()

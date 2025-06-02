@@ -23,7 +23,7 @@ plt.show()
 msno.heatmap(df)
 plt.title("Missing Data Correlation Heatmap")
 plt.show()
-
+# how to 
 
 ###################
 
@@ -31,6 +31,7 @@ msno.dendrogram(df)
 plt.title("Missing Data Dendrogram")
 plt.show()
 # how to identify missing data from dendrogram chart
+
 
 ###################
 

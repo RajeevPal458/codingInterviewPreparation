@@ -84,6 +84,46 @@ feature_selection.chi2
 # feature_selection.SelectFwe
 feature_selection.SelectKBest
 
+# list only feature selection techniques which uses filter methods from sklearn library
+# Filter methods in feature selection are techniques that evaluate the relevance of features based on their statistical properties, independent of any machine learning model. Here are some filter methods from sklearn's feature_selection module:
+# 1. chi2: Chi-squared test for non-negative features.
+# 2. f_classif: ANOVA F-value between label/feature for classification tasks.
+# 3. f_regression: F-value between label/feature for regression tasks.
+# 4. mutual_info_classif: Mutual information between label/feature for classification tasks.
+# 5. mutual_info_regression: Mutual information between label/feature for regression tasks.
+# 6. VarianceThreshold: Removes features with low variance.
+# 7. SelectKBest: Selects the top k features based on a scoring function.
+# 8. SelectPercentile: Selects a percentage of features based on a scoring function.
+# 9. SelectFdr: Selects features based on false discovery rate.
+# 10. SelectFpr: Selects features based on false positive rate.
+# 11. SelectFwe: Selects features based on family-wise error rate.
+# 12. GenericUnivariateSelect: A generic univariate feature selector that can be configured to use different scoring functions.
+# 13. SelectFromModel: Selects features based on importance weights from a model.
+# 14. SequentialFeatureSelector: A sequential feature selector that can be configured to use different scoring functions.
+# 15. RFE (Recursive Feature Elimination): A wrapper method that recursively removes features and builds a model on the remaining features.
+# 16. RFECV (Recursive Feature Elimination with Cross-Validation): A wrapper method that performs RFE with cross-validation to find the optimal number of features.
+# list all feature extraction techniques from sklearn library
+# Feature extraction techniques in sklearn are methods that transform raw data into a format suitable for machine learning models. Here are some feature extraction techniques from sklearn:
+# 1. CountVectorizer: Converts a collection of text documents to a matrix of token counts.
+# 2. TfidfVectorizer: Converts a collection of text documents to a matrix of TF-IDF features.
+# 3. HashingVectorizer: Converts a collection of text documents to a matrix of hashed features.
+# 4. FeatureHasher: A transformer that applies the hashing trick to convert a collection of text documents to a matrix of hashed features.
+# 5. DictVectorizer: Converts a list of feature-value mappings to a matrix of features.
+# 6. ImageExtractor: Extracts features from images using various techniques.
+# 7. PCA (Principal Component Analysis): A dimensionality reduction technique that transforms data to a lower-dimensional space while preserving variance.
+# 8. TruncatedSVD: A dimensionality reduction technique that uses Singular Value Decomposition (SVD) to reduce the dimensionality of sparse matrices.
+# 9. FastICA: An independent component analysis technique that separates a multivariate signal into additive, independent components.
+# 10. NMF (Non-negative Matrix Factorization): A dimensionality reduction technique that factorizes a non-negative matrix into two non-negative matrices.
+# 11. FactorAnalysis: A technique that models the covariance structure of a dataset using latent variables.
+# 12. SparsePCA: A variant of PCA that produces sparse components.
+# 13. MiniBatchSparsePCA: A variant of SparsePCA that processes data in mini-batches for efficiency.
+# 14. IncrementalPCA: A variant of PCA that allows for incremental updates to the model.
+# 15. KernelPCA: A variant of PCA that uses kernel methods to perform non-linear dimensionality reduction.
+# 16. LatentDirichletAllocation: A generative probabilistic model for topic modeling.
+# 17. DictionaryLearning: A technique that learns a dictionary of atoms for sparse coding.
+# 18. SparseCoder: A technique that encodes data using a learned dictionary of atoms.
+# 19. FeatureUnion: A meta-transformer that combines multiple feature extraction techniques into a single transformer.
+# 20. make_column_transformer: A utility function to create a column transformer that applies different feature extraction techniques to different columns of a dataset.
 
 
 # code example of the data preprocessing using StandardScaler techniques from sklearn library take the real word data set of 10*5
