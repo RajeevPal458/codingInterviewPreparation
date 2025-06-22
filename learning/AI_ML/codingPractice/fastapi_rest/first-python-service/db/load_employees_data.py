@@ -1,4 +1,4 @@
-from model.employee import Employee
+from models.employee import Employee
 import json
 class EmployeesDataUploader:
     # Class-level variable to hold the single instance
