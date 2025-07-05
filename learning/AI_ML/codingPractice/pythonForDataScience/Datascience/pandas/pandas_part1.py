@@ -26,6 +26,8 @@ arr = pd.Series(np.full((2, 5), 10).flatten())
 print("\nCreating a Series with a constant value of 10:")
 print(arr)
 
+
+
 # Create a DataFrame ==============================================
 print("\nCreating a DataFrame with random integers:")
 df = pd.DataFrame(np.fromfunction(function,(5, 5),dtype=int),columns=['A', 'B', 'C', 'D', 'E'])
@@ -111,10 +113,15 @@ print(df)
 
 print("\nSelecting a row by index using loc:")
 print(df.loc[1])  # Select the row with index 1 (Bob)
+print("========")
 print(df.iloc[2:3,2:3]) # Select rows 2 to 3 and columns 2 to 3 (Charlie and David's Salary)
+print("========")
 print(df.loc[:3, ['Name', 'Salary']])  # Select rows up to index 3 and columns 'Name' and 'Salary'
+print("========")
 print(df.loc[[1,3], ['Name', 'Department']])  # Select rows 1 and 3 and columns 'Name' and 'Department'
+print("========")
 print(df.loc[(df['Age']> 25) & (df['Salary'] > 60000)]) # Select rows where Age > 25 and Salary > 60000
+print("========")
 print(df.query('Age > 25 & Salary >= 60000'))  # Using query method to filter rows
 print("\nFiltering rows where 'Age' is greater than 25:")
 print(df[df['Age'] > 25])  # Filter rows where Age is greater than 25
