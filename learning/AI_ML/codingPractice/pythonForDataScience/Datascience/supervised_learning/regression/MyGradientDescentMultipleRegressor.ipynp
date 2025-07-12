@@ -8,8 +8,8 @@ class GDMultipleLinearRegressor:
     def __init__(self, lr=0.01, epochs=1000):
         self.lr = lr
         self.epochs = epochs
-        self.weights = None
-        self.bias = 0
+        self.W = None
+        self.B = 0
         self.losses = []
 
     def fit(self, X, y):
@@ -19,11 +19,11 @@ class GDMultipleLinearRegressor:
             y = y.values
 
         m, n = X.shape
-        self.weights = np.zeros(n)
-        self.bias = 0
+        self.W = np.zeros(n)
+        self.B = 0
 
         for epoch in range(self.epochs):
-            y_pred = np.dot(X, self.weights) + self.bias
+            y_pred = np.dot(X, self.W) + self.B
             error = y - y_pred
 
             # Gradients
@@ -31,20 +31,20 @@ class GDMultipleLinearRegressor:
             db = (-2 / m) * np.sum(error)
 
             # Update
-            self.weights -= self.lr * dw
-            self.bias -= self.lr * db
+            self.W -= self.lr * dw
+            self.B -= self.lr * db
 
             # Loss (MSE)
             loss = (1 / m) * np.sum(error ** 2)
             self.losses.append(loss)
 
             if epoch % 100 == 0:
-                print(f"Epoch {epoch:4d} | Loss: {loss:.4f} | Weights: {self.weights[:3]}... | Bias: {self.bias:.4f}")
+                print(f"Epoch {epoch:4d} | Loss: {loss:.4f} | W: {self.W[:3]}... | B: {self.B:.4f}")
 
     def predict(self, X):
         if isinstance(X, pd.DataFrame):
             X = X.values
-        return np.dot(X, self.weights) + self.bias
+        return np.dot(X, self.W) + self.B
 
 
 
