@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from sklearn.datasets import load_diabetes
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_squared_error,root_mean_squared_error,r2_score
 import matplotlib.pyplot as plt
 
 class BatchGDRegressor:
@@ -68,6 +68,12 @@ predictions = model.predict(X_test)
 # Evaluate
 mse = mean_squared_error(y_test, predictions)
 print(f"\nTest MSE: {mse:.4f}")
+
+rmse = root_mean_squared_error(y_test,predictions)
+print(f"rmse : ",rmse)
+
+r2score = r2_score(y_test,predictions)
+print(f"r2 score : ",r2score)
 
 
 # Scatter Plot: Actual vs Predicted

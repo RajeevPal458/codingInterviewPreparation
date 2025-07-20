@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from sklearn.datasets import load_diabetes
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_squared_error, r2_score
 
 class SGDMultipleLinearRegressor:
     def __init__(self, lr=0.01, epochs=1000):
@@ -58,7 +58,7 @@ class SGDMultipleLinearRegressor:
             X = X.values
         return np.dot(X, self.W) + self.B
 
-
+np.random.seed(42)
 # Load and prepare data
 diabetes = load_diabetes()
 df = pd.DataFrame(diabetes.data, columns=diabetes.feature_names)
@@ -77,8 +77,11 @@ model.fit(X_train, y_train)
 predictions = model.predict(X_test)
 
 # Evaluate
-mse = mean_squared_error(y_test, predictions)
-print(f"\nTest MSE: {mse:.4f}")
+mse = mean_squared_error(y_test,predictions)
+print(f"rmse : ",np.sqrt(mse))
+
+r2score = r2_score(y_test,predictions)
+print(f"r2 score : ",r2score)
 
 
 
@@ -87,7 +90,7 @@ import matplotlib.pyplot as plt
 # Scatter Plot: Actual vs Predicted
 plt.figure(figsize=(6, 6))
 plt.scatter(y_test, predictions, color='blue', alpha=0.6, edgecolors='k', label="Predicted")
-plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'r--', lw=2, label="Perfect Prediction")
+plt.plot([y_test.min(), y_test.max()], [predictions.min(), predictions.max()], 'r--', lw=2, label="Perfect Prediction")
 
 plt.xlabel("Actual Values")
 plt.ylabel("Predicted Values")
