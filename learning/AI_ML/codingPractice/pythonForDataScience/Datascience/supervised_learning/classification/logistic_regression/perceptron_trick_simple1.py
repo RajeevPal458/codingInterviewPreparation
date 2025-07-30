@@ -17,6 +17,7 @@ class PerceptronTrick:
 
         def _sigmoid(self, z):
             return 1 / (1 + np.exp(-z))
+            #return (val >= 0.5).astype(int)
 
         def _activation(self, z):
             if self.use_sigmoid:
@@ -33,12 +34,9 @@ class PerceptronTrick:
                 for xi, target in zip(X, y):
                     z = np.dot(xi, self.W)
                     y_hat = self._activation(z)
-
-                    # For sigmoid, convert output to hard class (0 or 1)
-                    if self.use_sigmoid:
-                        y_hat = 1 if y_hat >= 0.5 else 0
-
-                    self.W += self.lr * (target - y_hat) * xi
+                    #print(f"yhat :{y_hat}")
+                    error = target - y_hat
+                    self.W += self.lr * error * xi
 
         def predict(self, X):
             X = np.insert(X, 0, 1, axis=1)
@@ -66,7 +64,7 @@ X[50:] -= 2   # Class 0 centered at (-2,-2)
 y = np.array([1]*50 + [0]*50)
 
 # --- Train Perceptron ---
-perceptron = PerceptronTrick(use_sigmoid=False)  # Change to True to use sigmoid
+perceptron = PerceptronTrick(use_sigmoid=True)  # Change to True to use sigmoid
 model = perceptron.model
 model.fit(X, y)
 

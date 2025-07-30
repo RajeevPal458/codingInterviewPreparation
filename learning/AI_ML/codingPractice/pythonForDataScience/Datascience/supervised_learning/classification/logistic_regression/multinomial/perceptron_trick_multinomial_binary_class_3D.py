@@ -30,12 +30,14 @@ class LogisticRegressionCustom:
         self.X = np.insert(X, 0, 1, axis=1)  # Add bias term
         self.y = y.reshape(-1, 1)
         self.weights = np.zeros((self.X.shape[1], 1))
-        
+        m,n = self.X.shape
         for _ in range(self.epochs):
             z = np.dot(self.X, self.weights)
-            h = self.sigmoid(z)
-            gradient = np.dot(self.X.T, (h - self.y)) / self.y.size
-            self.weights -= self.lr * gradient
+            pred = self.sigmoid(z)
+            error = pred - self.y
+            #print(f" error type : {type(error)} , size : {error.shape}")
+            dw = (1/m) * np.dot(self.X.T, error)
+            self.weights -= self.lr * dw   # dw is gradient
 
     def predict_proba(self, X):
         X = np.insert(X, 0, 1, axis=1)
